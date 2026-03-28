@@ -183,3 +183,4 @@ The app is configured for Netlify deployment. See `netlify.toml` for configurati
 - Logged-in customers can save multiple delivery addresses and reuse the default one automatically during checkout.
 - `npm run build` currently passes with editorial `<img>` warnings; those layouts were kept to preserve the original Stitch composition.
 # Website
+# Website
