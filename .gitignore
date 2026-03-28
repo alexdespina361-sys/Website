@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+.env
+.env.local
+.env*.local
+*.tsbuildinfo
+next-env.d.ts
+
+# Existing static files
+WebVersion/
+MobileVersion/
+docs/
+
+# OS
+.DS_Store
+Thumbs.db
