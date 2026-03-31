@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { signIn } from "@/lib/auth";
 import { useToast } from "@/components/ToastProvider";
+import { SITE_WORDMARK } from "@/lib/site";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -24,8 +25,8 @@ export default function LoginPage() {
     try {
       await signIn(email, password);
       showToast({
-        title: "Autentificare reușită",
-        description: "Te redirecționăm către contul tău.",
+        title: "Autentificare reusita",
+        description: "Te redirectionam catre contul tau.",
         tone: "success",
       });
       const nextPath =
@@ -44,26 +45,26 @@ export default function LoginPage() {
   return (
     <div>
       <Header />
-      <main className="pt-20 min-h-screen flex items-center justify-center px-12">
+      <main className="flex min-h-screen items-center justify-center px-12 pt-20">
         <div className="w-full max-w-md py-32">
-          <h1 className="font-headline text-5xl mb-4">Autentificare</h1>
-          <p className="font-label text-[11px] uppercase tracking-widest text-secondary mb-12">
-            Bine ai revenit la RED STUDIO
+          <h1 className="mb-4 font-headline text-5xl">Autentificare</h1>
+          <p className="mb-12 font-label text-[11px] uppercase tracking-widest text-secondary">
+            Bine ai revenit la {SITE_WORDMARK}
           </p>
 
-          {error && (
-            <div className="mb-8 p-4 bg-error-container text-on-error-container font-label text-xs uppercase tracking-widest">
+          {error ? (
+            <div className="mb-8 bg-error-container p-4 font-label text-xs uppercase tracking-widest text-on-error-container">
               {error}
             </div>
-          )}
+          ) : null}
 
           <form className="space-y-8" onSubmit={handleSubmit}>
             <div>
-              <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">
+              <label className="mb-2 block font-label text-[10px] uppercase tracking-[0.2em] text-outline">
                 Email
               </label>
               <input
-                className="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-body text-sm focus:ring-0 focus:border-primary transition-all duration-500"
+                className="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-4 font-body text-sm transition-all duration-500 focus:border-primary focus:ring-0"
                 type="email"
                 placeholder="adresa@email.com"
                 value={email}
@@ -72,11 +73,11 @@ export default function LoginPage() {
               />
             </div>
             <div>
-              <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">
-                Parolă
+              <label className="mb-2 block font-label text-[10px] uppercase tracking-[0.2em] text-outline">
+                Parola
               </label>
               <input
-                className="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-body text-sm focus:ring-0 focus:border-primary transition-all duration-500"
+                className="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-4 font-body text-sm transition-all duration-500 focus:border-primary focus:ring-0"
                 type="password"
                 placeholder="••••••••"
                 value={password}
@@ -87,20 +88,20 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-primary text-white py-5 font-label text-xs uppercase tracking-widest hover:bg-primary-container transition-all duration-500 disabled:opacity-50"
+              className="w-full bg-primary py-5 font-label text-xs uppercase tracking-widest text-white transition-all duration-500 hover:bg-primary-container disabled:opacity-50"
             >
-              {loading ? "Se autentifică..." : "Intră în Cont"}
+              {loading ? "Se autentifica..." : "Intra in cont"}
             </button>
           </form>
-          <div className="mt-8 text-center space-y-4">
+          <div className="mt-8 space-y-4 text-center">
             <Link
-              className="block font-label text-[10px] uppercase tracking-widest text-outline hover:text-primary transition-colors"
+              className="block font-label text-[10px] uppercase tracking-widest text-outline transition-colors hover:text-primary"
               href="/signup"
             >
-              Creează Cont Nou
+              Creeaza cont nou
             </Link>
             <Link
-              className="block font-label text-[10px] uppercase tracking-widest text-outline hover:text-primary transition-colors"
+              className="block font-label text-[10px] uppercase tracking-widest text-outline transition-colors hover:text-primary"
               href="/forgot-password"
             >
               Ai uitat parola?

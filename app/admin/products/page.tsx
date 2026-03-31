@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,6 +8,12 @@ import { formatPrice } from "@/lib/format";
 import type { ProductWithDetails } from "@/lib/types";
 import { useToast } from "@/components/ToastProvider";
 import Icon from "@/components/Icon";
+import {
+  CATEGORY_GROUPS,
+  formatProductCategory,
+  getCategoryOptions,
+  inferCategoryGroupFromLegacy,
+} from "@/lib/product-taxonomy";
 
 type VariantRow = {
   size: string;
@@ -16,6 +22,14 @@ type VariantRow = {
   compare_at_price_cents: number | null;
   stock: number;
 };
+
+const createEmptyVariantRow = (): VariantRow => ({
+  size: "",
+  color: "",
+  price_cents: 0,
+  compare_at_price_cents: null,
+  stock: 0,
+});
 
 export default function AdminProductsPage() {
   const { showToast } = useToast();
@@ -27,17 +41,29 @@ export default function AdminProductsPage() {
     name: "",
     slug: "",
     description: "",
+    category_group: "",
     category: "",
     material: "",
     season: "",
     image_url: "",
     image_alt_text: "",
+    image_urls_text: "",
     is_archived: false,
   });
   const [variantRows, setVariantRows] = useState<VariantRow[]>([
-    { size: "", color: "", price_cents: 0, compare_at_price_cents: null, stock: 0 },
+    createEmptyVariantRow(),
   ]);
   const [saving, setSaving] = useState(false);
+
+  const availableCategories = useMemo(() => {
+    const categoryOptions = getCategoryOptions(formData.category_group);
+
+    if (formData.category && !categoryOptions.includes(formData.category)) {
+      return [formData.category, ...categoryOptions];
+    }
+
+    return categoryOptions;
+  }, [formData.category, formData.category_group]);
 
   const fetchProducts = useCallback(async () => {
     try {
@@ -70,31 +96,40 @@ export default function AdminProductsPage() {
       name: "",
       slug: "",
       description: "",
+      category_group: "",
       category: "",
       material: "",
       season: "",
       image_url: "",
       image_alt_text: "",
+      image_urls_text: "",
       is_archived: false,
     });
-    setVariantRows([
-      { size: "", color: "", price_cents: 0, compare_at_price_cents: null, stock: 0 },
-    ]);
+    setVariantRows([createEmptyVariantRow()]);
     setEditingProduct(null);
     setShowForm(false);
   };
 
   const handleEdit = (product: ProductWithDetails) => {
+    const sortedImages = [...product.images].sort(
+      (leftImage, rightImage) => leftImage.sort_order - rightImage.sort_order
+    );
+
     setEditingProduct(product);
     setFormData({
       name: product.name,
       slug: product.slug,
       description: product.description || "",
+      category_group:
+        product.category_group ||
+        inferCategoryGroupFromLegacy(product.category) ||
+        "",
       category: product.category || "",
       material: product.material || "",
       season: product.season || "",
-      image_url: product.images[0]?.url || "",
-      image_alt_text: product.images[0]?.alt_text || "",
+      image_url: sortedImages[0]?.url || "",
+      image_alt_text: sortedImages[0]?.alt_text || "",
+      image_urls_text: sortedImages.slice(1).map((image) => image.url).join("\n"),
       is_archived: product.is_archived,
     });
     setVariantRows(
@@ -106,15 +141,7 @@ export default function AdminProductsPage() {
             compare_at_price_cents: v.compare_at_price_cents,
             stock: v.stock,
           }))
-        : [
-            {
-              size: "",
-              color: "",
-              price_cents: 0,
-              compare_at_price_cents: null,
-              stock: 0,
-            },
-          ]
+        : [createEmptyVariantRow()]
     );
     setShowForm(true);
   };
@@ -129,6 +156,24 @@ export default function AdminProductsPage() {
       variants: variantRows.filter(
         (variant) => (variant.size || variant.color) && variant.price_cents > 0
       ),
+      images: [
+        formData.image_url.trim()
+          ? {
+              url: formData.image_url.trim(),
+              alt_text: formData.image_alt_text.trim() || formData.name,
+              sort_order: 0,
+            }
+          : null,
+        ...formData.image_urls_text
+          .split(/\r?\n/)
+          .map((url) => url.trim())
+          .filter(Boolean)
+          .map((url, index) => ({
+            url,
+            alt_text: formData.name,
+            sort_order: index + 1,
+          })),
+      ].filter(Boolean),
     };
 
     try {
@@ -195,10 +240,7 @@ export default function AdminProductsPage() {
   };
 
   const addVariantRow = () => {
-    setVariantRows([
-      ...variantRows,
-      { size: "", color: "", price_cents: 0, compare_at_price_cents: null, stock: 0 },
-    ]);
+    setVariantRows([...variantRows, createEmptyVariantRow()]);
   };
 
   const removeVariantRow = (index: number) => {
@@ -286,14 +328,56 @@ export default function AdminProductsPage() {
                   </div>
                   <div>
                     <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">
-                      Categorie
+                      Departament
                     </label>
-                    <input
+                    <select
                       className="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-body text-sm focus:ring-0 focus:border-primary transition-all duration-500"
-                      type="text"
+                      value={formData.category_group}
+                      onChange={(e) => {
+                        const nextCategoryGroup = e.target.value;
+                        const nextCategoryOptions =
+                          getCategoryOptions(nextCategoryGroup);
+
+                        setFormData({
+                          ...formData,
+                          category_group: nextCategoryGroup,
+                          category: nextCategoryOptions.includes(formData.category)
+                            ? formData.category
+                            : "",
+                        });
+                      }}
+                    >
+                      <option value="">Selectează departamentul</option>
+                      {CATEGORY_GROUPS.map((categoryGroup) => (
+                        <option key={categoryGroup} value={categoryGroup}>
+                          {categoryGroup}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">
+                      Subcategorie
+                    </label>
+                    <select
+                      className="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-body text-sm focus:ring-0 focus:border-primary transition-all duration-500"
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    />
+                      disabled={
+                        !formData.category_group && availableCategories.length === 0
+                      }
+                    >
+                      <option value="">
+                        {formData.category_group
+                          ? "Selectează subcategoria"
+                          : "Alege mai întâi departamentul"}
+                      </option>
+                      {availableCategories.map((categoryOption) => (
+                        <option key={categoryOption} value={categoryOption}>
+                          {categoryOption}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                   <div>
                     <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">
@@ -343,6 +427,20 @@ export default function AdminProductsPage() {
                         setFormData({ ...formData, image_alt_text: e.target.value })
                       }
                       placeholder="Descriere imagine"
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">
+                      Imagini suplimentare
+                    </label>
+                    <textarea
+                      className="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-body text-sm focus:ring-0 focus:border-primary transition-all duration-500 resize-none"
+                      rows={4}
+                      value={formData.image_urls_text}
+                      onChange={(e) =>
+                        setFormData({ ...formData, image_urls_text: e.target.value })
+                      }
+                      placeholder={"Un URL pe linie.\nhttps://exemplu.ro/produs-2.webp\nhttps://exemplu.ro/produs-3.webp"}
                     />
                   </div>
                   <div className="md:col-span-2">
@@ -518,7 +616,9 @@ export default function AdminProductsPage() {
                             </span>
                           </div>
                         </td>
-                        <td className="p-4 font-label text-xs text-outline">{product.category}</td>
+                        <td className="p-4 font-label text-xs text-outline">
+                          {formatProductCategory(product)}
+                        </td>
                         <td className="p-4 font-label text-xs text-outline">{product.material}</td>
                         <td className="p-4 font-label text-sm text-primary font-bold text-right">
                           {formatPrice(minPrice)}

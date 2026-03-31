@@ -4,12 +4,13 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { useCart } from "@/lib/CartContext";
 import { formatPrice } from "@/lib/format";
-import { getProductImage } from "@/lib/constants";
+import { getSortedProductImages } from "@/lib/constants";
+import { formatProductCategory } from "@/lib/product-taxonomy";
 import type { ProductWithDetails } from "@/lib/types";
 import Icon from "@/components/Icon";
 
 export default function ProductDetailClient({
-  product,
+  product
 }: {
   product: ProductWithDetails;
 }) {
@@ -18,6 +19,7 @@ export default function ProductDetailClient({
   const [selectedColor, setSelectedColor] = useState(
     initialVariant?.color || null
   );
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const { addItem } = useCart();
   const [added, setAdded] = useState(false);
@@ -26,7 +28,10 @@ export default function ProductDetailClient({
     (variant) => variant.size && variant.size !== "Uni"
   );
   const hasColorOptions = product.variants.some((variant) => variant.color);
-  const productImage = getProductImage(product);
+  const productImages = getSortedProductImages(product);
+  const productImage = productImages[0]?.url || "";
+  const activeImage = productImages[selectedImageIndex] || productImages[0] || null;
+  const categoryLabel = formatProductCategory(product);
 
   const availableSizes = useMemo(() => {
     const scopedVariants = hasColorOptions
@@ -80,12 +85,22 @@ export default function ProductDetailClient({
   }, [availableColors, hasColorOptions, selectedColor]);
 
   useEffect(() => {
+    setSelectedImageIndex(0);
+  }, [product.id]);
+
+  useEffect(() => {
+    if (selectedImageIndex >= productImages.length && productImages.length > 0) {
+      setSelectedImageIndex(0);
+    }
+  }, [productImages.length, selectedImageIndex]);
+
+  useEffect(() => {
     if (!selectedVariant) {
       return;
     }
 
-    setQuantity((current) =>
-      Math.max(1, Math.min(current, selectedVariant.stock))
+    setQuantity((currentQuantity) =>
+      Math.max(1, Math.min(currentQuantity, selectedVariant.stock))
     );
   }, [selectedVariant]);
 
@@ -103,7 +118,7 @@ export default function ProductDetailClient({
         color: selectedVariant.color,
         priceCents: selectedVariant.price_cents,
         image: productImage,
-        availableStock: selectedVariant.stock,
+        availableStock: selectedVariant.stock
       },
       quantity
     );
@@ -114,32 +129,61 @@ export default function ProductDetailClient({
   return (
     <section className="px-12 md:px-24 py-32">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-        {/* Image */}
-        <div className="bg-surface-container-low overflow-hidden">
-          {productImage ? (
-            <Image
-              alt={product.name}
-              className="w-full h-auto object-cover"
-              src={productImage}
-              width={1200}
-              height={1500}
-              sizes="(min-width: 768px) 50vw, 100vw"
-              unoptimized={!productImage.startsWith("/")}
-            />
-          ) : (
-            <div className="flex aspect-[4/5] items-center justify-center px-8 text-center">
-              <span className="font-label text-[10px] uppercase tracking-[0.3em] text-outline">
-                Imagine indisponibilă
-              </span>
+        <div className="space-y-4">
+          <div className="bg-surface-container-low overflow-hidden">
+            {activeImage?.url ? (
+              <Image
+                alt={activeImage.alt_text || product.name}
+                className="w-full h-auto object-cover"
+                src={activeImage.url}
+                width={1200}
+                height={1500}
+                sizes="(min-width: 768px) 50vw, 100vw"
+                unoptimized={!activeImage.url.startsWith("/")}
+              />
+            ) : (
+              <div className="flex aspect-[4/5] items-center justify-center px-8 text-center">
+                <span className="font-label text-[10px] uppercase tracking-[0.3em] text-outline">
+                  Imagine indisponibilă
+                </span>
+              </div>
+            )}
+          </div>
+
+          {productImages.length > 1 ? (
+            <div className="grid grid-cols-4 gap-4">
+              {productImages.map((image, index) => (
+                <button
+                  key={`${image.url}-${index}`}
+                  type="button"
+                  onClick={() => setSelectedImageIndex(index)}
+                  className={`overflow-hidden border transition-colors ${
+                    index === selectedImageIndex
+                      ? "border-primary"
+                      : "border-outline-variant/30 hover:border-primary/40"
+                  }`}
+                >
+                  <Image
+                    alt={image.alt_text || `${product.name} ${index + 1}`}
+                    className="aspect-[4/5] h-auto w-full object-cover"
+                    src={image.url}
+                    width={320}
+                    height={400}
+                    sizes="(min-width: 768px) 12vw, 22vw"
+                    unoptimized={!image.url.startsWith("/")}
+                  />
+                </button>
+              ))}
             </div>
-          )}
+          ) : null}
         </div>
 
-        {/* Product Info */}
         <div className="flex flex-col justify-center">
-          <span className="font-label text-[10px] uppercase tracking-[0.3em] text-outline mb-4">
-            {product.category}
-          </span>
+          {categoryLabel ? (
+            <span className="font-label text-[10px] uppercase tracking-[0.3em] text-outline mb-4">
+              {categoryLabel}
+            </span>
+          ) : null}
           <h1 className="font-headline text-4xl md:text-5xl mb-4">
             {product.name}
           </h1>
@@ -150,23 +194,22 @@ export default function ProductDetailClient({
             {product.material}
           </p>
 
-          {/* Price */}
           <div className="mb-8">
             {selectedVariant ? (
               <>
                 <span className="font-headline text-3xl text-primary">
                   {formatPrice(selectedVariant.price_cents)}
                 </span>
-                {selectedVariant.compare_at_price_cents && (
+                {selectedVariant.compare_at_price_cents ? (
                   <span className="ml-4 font-label text-sm text-outline line-through">
                     {formatPrice(selectedVariant.compare_at_price_cents)}
                   </span>
-                )}
-                {selectedVariant.stock <= 5 && selectedVariant.stock > 0 && (
+                ) : null}
+                {selectedVariant.stock <= 5 && selectedVariant.stock > 0 ? (
                   <span className="block font-label text-[10px] uppercase tracking-widest text-outline mt-2">
                     Ultimele {selectedVariant.stock} bucăți
                   </span>
-                )}
+                ) : null}
               </>
             ) : (
               <span className="font-label text-[11px] uppercase tracking-widest text-outline">
@@ -175,8 +218,7 @@ export default function ProductDetailClient({
             )}
           </div>
 
-          {/* Size Selection */}
-          {hasSizeOptions && (
+          {hasSizeOptions ? (
             <div className="mb-8">
               <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-4">
                 Mărime
@@ -197,9 +239,9 @@ export default function ProductDetailClient({
                 ))}
               </div>
             </div>
-          )}
+          ) : null}
 
-          {hasColorOptions && availableColors.length > 0 && (
+          {hasColorOptions && availableColors.length > 0 ? (
             <div className="mb-8">
               <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-4">
                 Culoare
@@ -220,9 +262,8 @@ export default function ProductDetailClient({
                 ))}
               </div>
             </div>
-          )}
+          ) : null}
 
-          {/* Quantity */}
           <div className="mb-12">
             <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-4">
               Cantitate
@@ -250,7 +291,6 @@ export default function ProductDetailClient({
             </div>
           </div>
 
-          {/* Add to Cart */}
           <button
             onClick={handleAddToCart}
             disabled={!selectedVariant || selectedVariant.stock === 0}
@@ -263,7 +303,6 @@ export default function ProductDetailClient({
                 : "Adaugă în Coș"}
           </button>
 
-          {/* Additional Info */}
           <div className="mt-12 pt-12 border-t border-outline-variant/20 space-y-6">
             <div className="flex items-center gap-3">
               <Icon name="truck" className="h-4 w-4 text-outline" />

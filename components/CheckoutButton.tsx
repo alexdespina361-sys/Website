@@ -13,8 +13,6 @@ import {
   type ShippingAddressDraft,
 } from "@/lib/shipping-addresses";
 
-type PaymentMethod = "card" | "cash_on_delivery";
-
 export default function CheckoutButton() {
   const { items } = useCart();
   const { showToast } = useToast();
@@ -26,7 +24,6 @@ export default function CheckoutButton() {
   const [selectedAddressId, setSelectedAddressId] = useState<string>("");
   const [saveAddress, setSaveAddress] = useState(true);
   const [contactEmail, setContactEmail] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("card");
   const [draftAddress, setDraftAddress] = useState<ShippingAddressDraft>(
     createEmptyShippingAddress()
   );
@@ -112,7 +109,7 @@ export default function CheckoutButton() {
     if (!normalizedEmail) {
       showToast({
         title: "Email necesar",
-        description: "Completează un email de contact pentru comandă.",
+        description: "Completeaza un email de contact pentru comanda.",
         tone: "error",
       });
       return;
@@ -129,9 +126,9 @@ export default function CheckoutButton() {
         !normalizedAddress.country)
     ) {
       showToast({
-        title: "Adresă incompletă",
+        title: "Adresa incompleta",
         description:
-          "Completează destinatarul, adresa, orașul și țara înainte de checkout.",
+          "Completeaza destinatarul, adresa, orasul si tara inainte de confirmarea comenzii.",
         tone: "error",
       });
       return;
@@ -146,28 +143,29 @@ export default function CheckoutButton() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          paymentMethod: "cash_on_delivery",
           contactEmail: normalizedEmail,
-          paymentMethod,
           items: items.map((item) => ({
             variantId: item.variantId,
             quantity: item.quantity,
           })),
           shippingAddressId: usingSavedAddress ? selectedAddressId : null,
           shippingAddress: usingSavedAddress ? null : normalizedAddress,
-          selectedShippingAddress: usingSavedAddress && selectedAddress
-            ? {
-                label: selectedAddress.label,
-                recipient_name: selectedAddress.recipient_name,
-                phone: selectedAddress.phone || "",
-                address_line1: selectedAddress.address_line1,
-                address_line2: selectedAddress.address_line2 || "",
-                city: selectedAddress.city,
-                region: selectedAddress.region || "",
-                postal_code: selectedAddress.postal_code || "",
-                country: selectedAddress.country,
-                is_default: selectedAddress.is_default,
-              }
-            : null,
+          selectedShippingAddress:
+            usingSavedAddress && selectedAddress
+              ? {
+                  label: selectedAddress.label,
+                  recipient_name: selectedAddress.recipient_name,
+                  phone: selectedAddress.phone || "",
+                  address_line1: selectedAddress.address_line1,
+                  address_line2: selectedAddress.address_line2 || "",
+                  city: selectedAddress.city,
+                  region: selectedAddress.region || "",
+                  postal_code: selectedAddress.postal_code || "",
+                  country: selectedAddress.country,
+                  is_default: selectedAddress.is_default,
+                }
+              : null,
           saveAddress:
             isLoggedIn && useNewAddress ? Boolean(saveAddress) : false,
         }),
@@ -176,12 +174,7 @@ export default function CheckoutButton() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "Nu am putut iniția checkout-ul.");
-      }
-
-      if (data.url) {
-        window.location.href = data.url;
-        return;
+        throw new Error(data.error || "Nu am putut confirma comanda.");
       }
 
       if (data.redirectUrl) {
@@ -189,14 +182,14 @@ export default function CheckoutButton() {
         return;
       }
 
-      throw new Error("Răspuns de checkout neașteptat.");
+      throw new Error("Raspuns de checkout neasteptat.");
     } catch (error) {
       showToast({
         title: "Checkout indisponibil",
         description:
           error instanceof Error
             ? error.message
-            : "Încearcă din nou în câteva momente.",
+            : "Incearca din nou in cateva momente.",
         tone: "error",
       });
     } finally {
@@ -207,7 +200,7 @@ export default function CheckoutButton() {
   return (
     <div className="space-y-8">
       <div>
-        <h4 className="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-4">
+        <h4 className="mb-4 font-label text-[10px] uppercase tracking-[0.2em] text-outline">
           Contact
         </h4>
         <input
@@ -219,50 +212,19 @@ export default function CheckoutButton() {
         />
       </div>
 
-      <div>
-        <h4 className="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-4">
-          Metodă de Plată
+      <div className="border border-outline-variant/30 bg-surface-container-lowest p-4">
+        <h4 className="font-label text-[10px] uppercase tracking-[0.2em]">
+          Metoda de plata
         </h4>
-        <div className="grid gap-3">
-          <button
-            type="button"
-            onClick={() => setPaymentMethod("card")}
-            className={`border p-4 text-left transition-colors ${
-              paymentMethod === "card"
-                ? "border-primary bg-primary/5"
-                : "border-outline-variant/30 bg-surface-container-lowest"
-            }`}
-          >
-            <p className="font-label text-[10px] uppercase tracking-[0.2em]">
-              Card online
-            </p>
-            <p className="mt-2 font-body text-sm text-secondary">
-              Plata se finalizează securizat prin Stripe Checkout.
-            </p>
-          </button>
-          <button
-            type="button"
-            onClick={() => setPaymentMethod("cash_on_delivery")}
-            className={`border p-4 text-left transition-colors ${
-              paymentMethod === "cash_on_delivery"
-                ? "border-primary bg-primary/5"
-                : "border-outline-variant/30 bg-surface-container-lowest"
-            }`}
-          >
-            <p className="font-label text-[10px] uppercase tracking-[0.2em]">
-              Ramburs la livrare
-            </p>
-            <p className="mt-2 font-body text-sm text-secondary">
-              Confirmi comanda acum și plătești la primirea coletului.
-            </p>
-          </button>
-        </div>
+        <p className="mt-2 font-body text-sm text-secondary">
+          Plata se face exclusiv ramburs, la primirea coletului.
+        </p>
       </div>
 
       <div className="border-t border-outline-variant/20 pt-8">
         <div className="flex items-center justify-between gap-4">
           <h4 className="font-label text-[10px] uppercase tracking-[0.2em] text-outline">
-            Adresă de Livrare
+            Adresa de livrare
           </h4>
           {isLoggedIn && savedAddresses.length > 0 ? (
             <button
@@ -270,7 +232,7 @@ export default function CheckoutButton() {
               onClick={() => setUseNewAddress((current) => !current)}
               className="font-label text-[9px] uppercase tracking-[0.2em] text-outline transition-colors hover:text-primary"
             >
-              {useNewAddress ? "Folosește o adresă salvată" : "Altă adresă"}
+              {useNewAddress ? "Foloseste o adresa salvata" : "Alta adresa"}
             </button>
           ) : null}
         </div>
@@ -295,7 +257,7 @@ export default function CheckoutButton() {
                     </p>
                     {address.is_default ? (
                       <span className="mt-2 inline-block bg-primary/10 px-3 py-1 font-label text-[9px] uppercase tracking-[0.2em] text-primary">
-                        Implicită
+                        Implicita
                       </span>
                     ) : null}
                   </div>
@@ -324,9 +286,9 @@ export default function CheckoutButton() {
             {isLoggedIn ? null : (
               <p className="font-body text-sm text-secondary">
                 <Link href="/login" className="text-primary hover:underline">
-                  Intră în cont
+                  Intra in cont
                 </Link>{" "}
-                pentru a salva și reutiliza adresele de livrare.
+                pentru a salva si reutiliza adresele de livrare.
               </p>
             )}
             <div className="grid grid-cols-1 gap-6">
@@ -340,7 +302,7 @@ export default function CheckoutButton() {
                     label: event.target.value,
                   }))
                 }
-                placeholder="Etichetă adresă"
+                placeholder="Eticheta adresa"
               />
               <input
                 className="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-4 font-body text-sm focus:border-primary focus:ring-0"
@@ -376,7 +338,7 @@ export default function CheckoutButton() {
                     address_line1: event.target.value,
                   }))
                 }
-                placeholder="Adresă"
+                placeholder="Adresa"
               />
               <input
                 className="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-4 font-body text-sm focus:border-primary focus:ring-0"
@@ -401,7 +363,7 @@ export default function CheckoutButton() {
                       city: event.target.value,
                     }))
                   }
-                  placeholder="Oraș"
+                  placeholder="Oras"
                 />
                 <input
                   className="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-4 font-body text-sm focus:border-primary focus:ring-0"
@@ -413,7 +375,7 @@ export default function CheckoutButton() {
                       region: event.target.value,
                     }))
                   }
-                  placeholder="Județ / Regiune"
+                  placeholder="Judet / Regiune"
                 />
                 <input
                   className="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-4 font-body text-sm focus:border-primary focus:ring-0"
@@ -425,7 +387,7 @@ export default function CheckoutButton() {
                       postal_code: event.target.value,
                     }))
                   }
-                  placeholder="Cod poștal"
+                  placeholder="Cod postal"
                 />
               </div>
               <input
@@ -438,7 +400,7 @@ export default function CheckoutButton() {
                     country: event.target.value,
                   }))
                 }
-                placeholder="Țară"
+                placeholder="Tara"
               />
             </div>
 
@@ -452,7 +414,7 @@ export default function CheckoutButton() {
                     onChange={(event) => setSaveAddress(event.target.checked)}
                   />
                   <span className="font-label text-[10px] uppercase tracking-[0.2em] text-outline">
-                    Salvează această adresă în cont
+                    Salveaza aceasta adresa in cont
                   </span>
                 </label>
                 {saveAddress ? (
@@ -469,7 +431,7 @@ export default function CheckoutButton() {
                       }
                     />
                     <span className="font-label text-[10px] uppercase tracking-[0.2em] text-outline">
-                      Folosește ca adresă implicită
+                      Foloseste ca adresa implicita
                     </span>
                   </label>
                 ) : null}
@@ -482,26 +444,16 @@ export default function CheckoutButton() {
       <button
         onClick={handleCheckout}
         disabled={loading || items.length === 0}
-        className="block w-full bg-primary text-white py-5 font-label text-xs uppercase tracking-widest text-center hover:bg-primary-container transition-all duration-500 shadow-lg hover:shadow-primary/40 hover:-translate-y-1 btn-hover-effect disabled:opacity-50 disabled:cursor-not-allowed"
+        className="btn-hover-effect block w-full bg-primary py-5 text-center font-label text-xs uppercase tracking-widest text-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-primary-container hover:shadow-primary/40 disabled:cursor-not-allowed disabled:opacity-50"
       >
-        {loading
-          ? "Se procesează..."
-          : paymentMethod === "cash_on_delivery"
-            ? "Confirmă Comanda cu Ramburs"
-            : "Continuă spre Plata Online"}
+        {loading ? "Se proceseaza..." : "Confirma comanda cu ramburs"}
       </button>
 
-      {paymentMethod === "cash_on_delivery" ? (
-        <p className="font-body text-xs leading-relaxed text-secondary">
-          Comanda este creată imediat, iar plata se face la livrare. Vei primi
-          confirmarea prin email și o vei vedea direct în cont dacă ești autentificat.
-        </p>
-      ) : selectedAddress ? (
-        <p className="font-body text-xs leading-relaxed text-secondary">
-          Adresa selectată va fi folosită automat pentru livrare înainte de
-          redirecționarea către Stripe.
-        </p>
-      ) : null}
+      <p className="font-body text-xs leading-relaxed text-secondary">
+        Comanda este creata imediat, iar plata se face la livrare. Vei primi
+        confirmarea prin email si o vei vedea direct in cont daca esti
+        autentificat.
+      </p>
     </div>
   );
 }

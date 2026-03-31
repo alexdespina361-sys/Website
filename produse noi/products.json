@@ -1,0 +1,1950 @@
+[
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdw8wZyDyI_8_1&localcountry=RO&shc=2_lAdw8wZyDyI&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/RafferizaRochieelegant%C4%83,sexy,cudecolteu%C3%AEnV%C8%99italie%C3%AEnalt%C4%83,tricotat%C4%83elastic%C4%83cupaiete,neagr%C4%83,potrivit%C4%83pentrupetreceri,%C3%AEnt%C3%A2lnirizilnice,petreceri%C8%99i%C8%9Binutelungideiarn%C4%83pentrufemei-p-43296921-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/RafferizaRochieelegant%C4%83,sexy,cudecolteu%C3%AEnV%C8%99italie%C3%AEnalt%C4%83,tricotat%C4%83elastic%C4%83cupaiete,neagr%C4%83,potrivit%C4%83pentrupetreceri,%C3%AEnt%C3%A2lnirizilnice,petreceri%C8%99i%C8%9Binutelungideiarn%C4%83pentrufemei-p-43296921-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Rafferiza Rochie elegantă, sexy, cu decolteu în V și talie înaltă, tricotată elastică cu paiete, neagră, potrivită pentru petreceri, întâlniri zilnice, petreceri și ținute lungi de iarnă pentru femei",
+    "brand": "Rafferiza",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/04/57/17569671122514ec42447ad52e97fbb94eb60d56af_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/04/a5/17569671149a2933172d564741c270859664f56117_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/04/b7/17569671161b0a00d8bd93f1907e6e3fca73c11f2e_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/04/fb/175696711742ebaf506387e8465e070a804edb649d_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/04/7b/1756967119a36ce4d0f5659d6c009e131c3e82d2a2_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/04/0e/17569671205cbaf7c514d1e976c4b8292d8e3bc0a0_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "44",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "10",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "44,62Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "57,07Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "43296921",
+      "categoryId": "12476",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAd8bBh81b4_8_1&localcountry=RO&shc=2_lAd8bBh81b4&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/ElenzgaRochiededam%C4%83cum%C3%A2nec%C4%83lung%C4%83,brodat%C4%83,cudecolteu%C3%AEnV-p-83457141-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/ElenzgaRochiededam%C4%83cum%C3%A2nec%C4%83lung%C4%83,brodat%C4%83,cudecolteu%C3%AEnV-p-83457141-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Elenzga Rochie de damă cu mânecă lungă, brodată, cu decolteu în V",
+    "brand": "Elenzga",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2025/05/21/8b/17478060442f70ef7850ddaa567cb062b67ca01e7e_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/05/21/e0/1747806041f014652ad7b8740d0feb19b189f777dc_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/05/21/55/1747806040225f4d20e30a35538942ccfd505b787f_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/05/21/aa/1747806046de7df2d014ede159b8c26bcf64cdf1bc_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/05/21/9e/1747806049fbd1e168c296caa1e605bbd7d21f7209_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/05/21/72/1747806050c7810b4b0faff863ab149a1a0aed6a51_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/05/21/36/1747806053595691fa20a3eba50c7288a20e50f5be_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "88",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "19",
+        "inStock": null
+      },
+      {
+        "label": "10",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "88,12Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "114,79Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "83457141",
+      "categoryId": "12476",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAd8A3IUzkR_8_1&localcountry=RO&shc=2_lAd8A3IUzkR&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/RafferizaRochieelegant%C4%83deluxpentrufemei,cuunum%C4%83r,dinplas%C4%83,cuaplica%C8%9Biibrodateaurii,linieA-p-139142270-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/RafferizaRochieelegant%C4%83deluxpentrufemei,cuunum%C4%83r,dinplas%C4%83,cuaplica%C8%9Biibrodateaurii,linieA-p-139142270-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Rafferiza Rochie elegantă de lux pentru femei, cu un umăr, din plasă, cu aplicații brodate aurii, linie A",
+    "brand": "Rafferiza",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/30/97/1753838981b0fae716fbf2d0d0b1cffc950d4df785_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/30/2a/17538389821715dcb982315fb4c45ce4a0ce35aad7_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/30/cd/1753838984a4659a9750225e35d934aee0ec7f8ee4_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/30/23/1753838985246a4a8ced834fc442fb52952c81bfbf_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/30/93/1753838987881fecf59bcefff880ee7c58f2dad385_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/30/ee/1753838988c4cf94f62af6c13201b0d34abbb856f7_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "67",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "15",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "67,87Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "89,99Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "139142270",
+      "categoryId": "12476",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdcema1dak_8_1&localcountry=RO&shc=2_lAdcema1dak&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/SOLERSUNRochiemaxipentrufemei,culoaresolid%C4%83,simpl%C4%83,casual,cum%C3%A2nec%C4%83lung%C4%83,decupat%C4%83-p-40737303-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/SOLERSUNRochiemaxipentrufemei,culoaresolid%C4%83,simpl%C4%83,casual,cum%C3%A2nec%C4%83lung%C4%83,decupat%C4%83-p-40737303-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "SOLERSUN Rochie maxi pentru femei, culoare solidă, simplă, casual, cu mânecă lungă, decupată",
+    "brand": "SOLERSUN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/28/7e/1764325910aa6abec5f16f5f29506b226a1ba9b5d7_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/28/a5/1764325912a1f0e94b6c94bab8c4027126f983159b_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/28/78/17643259147b0b7bb1b750ae258fe551699fdbb7bd_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/28/05/17643259159625e3ab16dccea9ed2479f840cf7ea9_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/28/31/1764325917c6b574d76493c93288ea7f7082d87ed4_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/28/5c/1764325919f048bde5f5622743b72e2453e327b4ab_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "72",
+        "inStock": null
+      },
+      {
+        "label": "XS",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "XXL",
+        "inStock": null
+      },
+      {
+        "label": "16",
+        "inStock": null
+      },
+      {
+        "label": "10",
+        "inStock": null
+      },
+      {
+        "label": "14",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "72,49Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "67,87Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "40737303",
+      "categoryId": "12476",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdcfdIgH5t_8_1&localcountry=RO&shc=2_lAdcfdIgH5t&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/EURMUSEROCHIEDEPETRECEREFEMEIENEGRACUPAIETEGOBATSLIMFITELEGANT-p-47195873-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/EURMUSEROCHIEDEPETRECEREFEMEIENEGRACUPAIETEGOBATSLIMFITELEGANT-p-47195873-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "EURMUSE ROCHIE DE PETRECERE FEMEIE NEGRA CU PAIETE GOBAT SLIM FIT ELEGANT",
+    "brand": "EURMUSE",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/images3_pi/2024/11/11/09/1731309116aa654e921bae5c4bd79aab1e90e39e39_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2024/11/11/88/1731309118c79f838b166a0d8cbbab7f19467a3050_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2024/11/11/cc/1731309120cbe56c49e3774e59ccdb85daf2872c2c_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2024/11/11/d9/1731309123462413e5ae3ea417965c8bcad16f2b3a_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2024/11/11/31/1731309125ac549547ddd86c99c237ab2b775c92e9_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2024/11/11/d1/1731309129749fa1cc879ad18b783e0de4047e8414_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "68",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "15",
+        "inStock": null
+      },
+      {
+        "label": "14",
+        "inStock": null
+      },
+      {
+        "label": "10",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "68,17Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "72,49Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "47195873",
+      "categoryId": "12476",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdvRI3S9MJ_8_1&localcountry=RO&shc=2_lAdvRI3S9MJ&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/SirenGazeRochiededam%C4%83dinsatindeculoaresolid%C4%83,cugulerdrapat,cuvolane,plisat%C4%83,cum%C3%A2nec%C4%83lung%C4%83,rochievintageelegant%C4%83pentrudoamne,rochiedesear%C4%83,%C8%9Binut%C4%83deAnulNou,Ziua%C3%8Endr%C4%83gosti%C8%9Bilor,%C3%AEnt%C3%A2lnireromantic%C4%83,rochieluxoas%C4%83-p-302033729-cat-1727.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/SirenGazeRochiededam%C4%83dinsatindeculoaresolid%C4%83,cugulerdrapat,cuvolane,plisat%C4%83,cum%C3%A2nec%C4%83lung%C4%83,rochievintageelegant%C4%83pentrudoamne,rochiedesear%C4%83,%C8%9Binut%C4%83deAnulNou,Ziua%C3%8Endr%C4%83gosti%C8%9Bilor,%C3%AEnt%C3%A2lnireromantic%C4%83,rochieluxoas%C4%83-p-302033729-cat-1727.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Siren Gaze Rochie de damă din satin de culoare solidă, cu guler drapat, cu volane, plisată, cu mânecă lungă, rochie vintage elegantă pentru doamne, rochie de seară, ținută de Anul Nou, Ziua Îndrăgostiților, întâlnire romantică, rochie luxoasă",
+    "brand": "Siren Gaze",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/24/5f/17639542215ea9341ee803661b4d7238fcc293923f_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/24/9f/17639542222d6d708c34c8a24a9b3286de085019af_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/24/1f/176395422402011a6e95cc7c88d01fcb793c9dd3ed_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/24/3e/17639542262b888d492b77377032d318762c0c9df3_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/24/88/1763954229017959149602d2011dfeec8eb5f6835d_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/24/b3/176395423092160f07e8157ebfcf16fe34de7cab3e_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/24/5c/176395423241ec053d7c2e091127ce812683b2a00e_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "99",
+        "inStock": null
+      },
+      {
+        "label": "XS",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "22",
+        "inStock": null
+      },
+      {
+        "label": "10",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "99,10Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "72,49Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "302033729",
+      "categoryId": "1727",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdv3lv8Rbg_8_1&localcountry=RO&shc=2_lAdv3lv8Rbg&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/RafferizaRochiededam%C4%83cucataram%C4%83metalic%C4%83cuvolane-p-55851492-cat-12475.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/RafferizaRochiededam%C4%83cucataram%C4%83metalic%C4%83cuvolane-p-55851492-cat-12475.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Rafferiza Rochie de damă cu cataramă metalică cu volane",
+    "brand": "Rafferiza",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/14/14/17524595810fc0dd1910b7e954d6b7d0e109ebbbe4_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/14/c9/1752459583a18c0ee4433f275dea5eb6a8a7753625_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/14/59/17524595845fcd50cc978186add990662d601066e7_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/14/b9/1752459585b181b358d10a32a23804bd3b14c40fae_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/14/e0/175245958653cbcb7be8d641071449cbc50fa53df8_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/07/14/cd/175245958808a9c88855ed3e6d8f9ac1dcb8ea2f0b_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "44",
+        "inStock": null
+      },
+      {
+        "label": "XS",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "10",
+        "inStock": null
+      },
+      {
+        "label": "14",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "44,99Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "58,40Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "55851492",
+      "categoryId": "12475",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdvUMam3mJ_8_1&localcountry=RO&shc=2_lAdvUMam3mJ&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/ElenzgaOrochielung%C4%83,elegant%C4%83%C8%99iromantic%C4%83detoamn%C4%83pentrufemei-p-387700250-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/ElenzgaOrochielung%C4%83,elegant%C4%83%C8%99iromantic%C4%83detoamn%C4%83pentrufemei-p-387700250-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Elenzga O rochie lungă, elegantă și romantică de toamnă pentru femei",
+    "brand": "Elenzga",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/26/28/1769408166c5698e844a005888ae44ec8040c49368_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/26/8b/176940816840e843b83efb386ca4ad0c279bced1b7_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/26/90/17694081711aa380c48eec6bd64a736b710109735c_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/26/36/17694081725d20566010075723488c884e23699b3b_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/26/bf/1769408174b462679a5c2c348143b9908a53ac44e3_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/26/83/1769408175e6181b7156d235c755d5d33127812498_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/26/9a/176940817717f9e83cf3fe3bb2a74968ae94e324f2_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "92",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "20",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "92,99Lei"
+      },
+      "original": {
+        "value": null,
+        "text": null
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "387700250",
+      "categoryId": "12476",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdvxyC1csc_8_1&localcountry=RO&shc=2_lAdvxyC1csc&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/BamGleamSet2buc%C4%83%C8%9Bilamod%C4%83,sexy,cuimprimeuleopard,text%C3%AEnenglez%C4%83,cutalieelastic%C4%83,pentrufemei-p-180571350-cat-1780.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/BamGleamSet2buc%C4%83%C8%9Bilamod%C4%83,sexy,cuimprimeuleopard,text%C3%AEnenglez%C4%83,cutalieelastic%C4%83,pentrufemei-p-180571350-cat-1780.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "BamGleam Set 2 bucăți la modă, sexy, cu imprimeu leopard, text în engleză, cu talie elastică, pentru femei",
+    "brand": "BamGleam",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2025/10/11/81/1760146186533472778c3e5c3e2da19bf3f47acac1_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/13/64/1757738537a562940612a178dedf99cdb2ffac655f_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/13/bd/17577385367b5b1b251f502b7ba97b03680a6128c0_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/13/1a/17577385400febf7da03dea418e2e5add9486a4461_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/13/24/1757738539f1bb8c38fb52021b224f61c3e1187552_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/13/89/17577385423341e628cbbf03483c4659f2b4830b3f_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/13/78/1757738541e9f6de464e26171d7f18793ed51c58a4_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/09/13/a5/1757738538d43a001f2e51eb2571c4b48c2620f70b_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "XS",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "13",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "58,65Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "35,19Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "180571350",
+      "categoryId": "1780",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdkVJ4vYfc_8_1&localcountry=RO&shc=2_lAdkVJ4vYfc&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/SOLERSUNSetde2buc%C4%83%C8%9Bipentrufemei,toamn%C4%83-iarn%C4%83,designgraficcuimprimeucontrastant,culorilungi,top%C8%99ipantaloni,setdeZiuaRecuno%C8%99tin%C8%9Bei,%C8%9Binutedeiarn%C4%83pentrufemei,hainedefemei-p-248867095-cat-1780.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/SOLERSUNSetde2buc%C4%83%C8%9Bipentrufemei,toamn%C4%83-iarn%C4%83,designgraficcuimprimeucontrastant,culorilungi,top%C8%99ipantaloni,setdeZiuaRecuno%C8%99tin%C8%9Bei,%C8%9Binutedeiarn%C4%83pentrufemei,hainedefemei-p-248867095-cat-1780.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "SOLERSUN Set de 2 bucăți pentru femei, toamnă/iarnă, design grafic cu imprimeu contrastant, culori lungi, top și pantaloni, set de Ziua Recunoștinței, ținute de iarnă pentru femei, haine de femei",
+    "brand": "SOLERSUN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/13/55/17630293636210c8dcce06eab6328cd4ee4c386cf0_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/13/fe/176302936522aa3a9943b1d030345bfe2665b4ab73_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/13/0a/1763029366c86a2deb516727ef40b60633cb5db411_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/13/d4/176302936824215958211ad160e0dede3f7f626f50_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/13/ca/17630293717fd7bb336f3a505c91aa924e7cf2289a_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/13/1e/1763029373a425a84cf3c009ee9a40e92b7ea139a9_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "11",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "51,74Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "68,99Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "248867095",
+      "categoryId": "1780",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdk7PldIOt_8_1&localcountry=RO&shc=2_lAdk7PldIOt&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/AIJSetdecostumcum%C3%A2nec%C4%83lung%C4%83,minimalist,deculoaresolid%C4%83,pentrufemeiAmarilo,deprim%C4%83var%C4%83-p-36546743-cat-2977.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/AIJSetdecostumcum%C3%A2nec%C4%83lung%C4%83,minimalist,deculoaresolid%C4%83,pentrufemeiAmarilo,deprim%C4%83var%C4%83-p-36546743-cat-2977.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "AIJ Set de costum cu mânecă lungă, minimalist, de culoare solidă, pentru femei Amarilo, de primăvară",
+    "brand": "AIJ",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/images3_spmp/2024/07/26/77/1721986646716036620930c63a9a43b3ce1749ce40_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_spmp/2024/07/26/77/172198664668de42b3d8bc7481dd4905dff4f4709e_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_spmp/2024/07/26/77/1721986646ff8677154062b4bae8316b9d66261b1d_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_spmp/2024/07/26/77/172198664665e4660b9788c1d6c3980416ca059ecc_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_spmp/2024/07/26/77/17219866462527279d1c4b7e0b03d6a92df453f26f_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_spmp/2024/07/26/77/17219866466163ef80e5c67ff078af18eb5e3facdf_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_spmp/2024/07/26/0a/1721986669f1d7d185b91e8f8685eaf5d330ff9994_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "XS",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "XXL",
+        "inStock": null
+      },
+      {
+        "label": "23",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "102,74Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "129,55Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "36546743",
+      "categoryId": "2977",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdkirz8tsP_8_1&localcountry=RO&shc=2_lAdkirz8tsP&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/ElenzgaRochieelegant%C4%83,sexy,mulat%C4%83,pentrufemei,pentrupetreceredenunt%C4%83,cum%C3%A2nec%C4%83lung%C4%83%C8%99iguler%C3%AEnalt,cumodelpatchworkdindantel%C4%83,culoaresolid%C4%83,toamn%C4%83-iarn%C4%83-p-365797899-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/ElenzgaRochieelegant%C4%83,sexy,mulat%C4%83,pentrufemei,pentrupetreceredenunt%C4%83,cum%C3%A2nec%C4%83lung%C4%83%C8%99iguler%C3%AEnalt,cumodelpatchworkdindantel%C4%83,culoaresolid%C4%83,toamn%C4%83-iarn%C4%83-p-365797899-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Elenzga Rochie elegantă, sexy, mulată, pentru femei, pentru petrecere de nuntă, cu mânecă lungă și guler înalt, cu model patchwork din dantelă, culoare solidă, toamnă/iarnă",
+    "brand": "Elenzga",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/ae/17682080632d50a4268227322fc9ba623314dfa93f_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/69/1768208064f7cdcc58b09f4148e2ee79eef256bc1d_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/ab/1768208066197a318d6e3d0b1dac23c420939fb351_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/0c/17682080687c6fa8ebeab34683503d0e39b14b941e_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/47/1768208069573c959c79d6cbf55b0a52513dff0aad_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/b5/17682080710c3a3eac8e2870aaac7749e9c178d182_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/20/17682080724fb02cf7a2000c73ac2b0558f3fa5b7a_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/03/1768208074cd975077e8e6269f98c2de97404cf062_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "39",
+        "inStock": null
+      },
+      {
+        "label": "XS",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "39,01Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "76,49Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "365797899",
+      "categoryId": "12476",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdk2ZaHedo_8_1&localcountry=RO&shc=2_lAdk2ZaHedo&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/ElenzgaSalopet%C4%83dedam%C4%83cudantel%C4%83aurie,setde2piese-p-365847257-cat-1780.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/ElenzgaSalopet%C4%83dedam%C4%83cudantel%C4%83aurie,setde2piese-p-365847257-cat-1780.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Elenzga Salopetă de damă cu dantelă aurie, set de 2 piese",
+    "brand": "Elenzga",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/23/c7/17691484639cfcbf1c79e12c23609ccf380a0d8fbc_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/c9/176820205486e19625b8e77ad7e437195c57724359_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/fd/176820205821600522196d352c5ce4b110a3e6e6fb_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/23/b3/1769148465339b20cf61fecdf43fad622d468bc289_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/91/176820206192e1edd7a3357c59558817b509a7ab42_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/41/1768202063fa783e02f0358697832d91abaa3e0371_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/6d/1768202053be5fc6f518f32e5c2bc90790f2e27d25_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2026/01/12/5a/17682020663bf7b864e93d5fcb83bac9fccaf946b1_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "24",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "108,37Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "65,02Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "365847257",
+      "categoryId": "1780",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdkgSwWr5A_8_1&localcountry=RO&shc=2_lAdkgSwWr5A&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/SHEINElenzyaRochieelegant%C4%83pentrufemei,cuguleroblic,m%C3%A2nec%C4%83lung%C4%83,mulat%C4%83,custr%C3%A2ngere%C3%AEntalie%C8%99inasturimetalici,toamn%C4%83-iarn%C4%83-p-263202846-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/SHEINElenzyaRochieelegant%C4%83pentrufemei,cuguleroblic,m%C3%A2nec%C4%83lung%C4%83,mulat%C4%83,custr%C3%A2ngere%C3%AEntalie%C8%99inasturimetalici,toamn%C4%83-iarn%C4%83-p-263202846-cat-12476.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "SHEIN Elenzya Rochie elegantă pentru femei, cu guler oblic, mânecă lungă, mulată, cu strângere în talie și nasturi metalici, toamnă/iarnă",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2025/12/02/06/176464752042d2d8c786963574b03e53b1eb41213a_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/67/1762234207df83201510369cc6a346c68b41d128bf_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/67/17622342099fda794118eeaa1854241ffd9637a57a_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/ae/1762234211f4127bbb6781ddfc46996519bebc5112_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/2f/1762234212dc52923bc13a9241a175314004191a61_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/e0/17622342151f91b7908535f7f0da391c3529e98083_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/ec/1762234217d863aed3a4f9b854307ee1037baea510_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/67/1762234218028e1c3b47eba884ef90c2735c6d6923_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "49",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "11",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "49,49Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "65,49Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "263202846",
+      "categoryId": "12476",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdky0KR2F6_8_1&localcountry=RO&shc=2_lAdky0KR2F6&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/BamGleamSalop%C4%83sexycudecolteuasimetric%C8%99imulat%C4%83,cuscobiturilaterale-p-261185442-cat-3289.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/BamGleamSalop%C4%83sexycudecolteuasimetric%C8%99imulat%C4%83,cuscobiturilaterale-p-261185442-cat-3289.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "BamGleam Salopă sexy cu decolteu asimetric și mulată, cu scobituri laterale",
+    "brand": "BamGleam",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/c1/1762258219ae4a7e7bec25e7eec8d3b4bbbc58b342_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/d8/17622582208d3475ac46381b08ad151f3c85ad0e2e_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/11/176225822251802bf1ab048aa4daa298ede84165bb_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/1e/1762258223e90d7f2a55d43864e1a68f419dab273e_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/pi/2025/11/04/46/17622582259a6efb6fec36edf0234b8151fefdd8ec_thumbnail_900x.webp"
+    ],
+    "sizes": [
+      {
+        "label": "30",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "30,37Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "40,49Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "261185442",
+      "categoryId": "3289",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdicizxG0b_8_1&localcountry=RO&shc=2_lAdicizxG0b&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/AIJSalopet%C4%83Amariloverde%C3%AEnchis,cum%C3%A2nec%C4%83lung%C4%83,talie%C3%AEncre%C8%9Bit%C4%83,cataram%C4%83metalic%C4%83,pantalonievaza%C8%9Bi,dincatifea,casualelegant%C4%83,potrivit%C4%83pentruCr%C4%83ciun,AnulNou%C8%99itoamna-iarna,%C8%9Binutedeprim%C4%83var%C4%83-p-186236312-cat-1860.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/AIJSalopet%C4%83Amariloverde%C3%AEnchis,cum%C3%A2nec%C4%83lung%C4%83,talie%C3%AEncre%C8%9Bit%C4%83,cataram%C4%83metalic%C4%83,pantalonievaza%C8%9Bi,dincatifea,casualelegant%C4%83,potrivit%C4%83pentruCr%C4%83ciun,AnulNou%C8%99itoamna-iarna,%C8%9Binutedeprim%C4%83var%C4%83-p-186236312-cat-1860.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "AIJ Salopetă Amarilo verde închis, cu mânecă lungă, talie încrețită, cataramă metalică, pantaloni evazați, din catifea, casual elegantă, potrivită pentru Crăciun, Anul Nou și toamna/iarna, ținute de primăvară",
+    "brand": "AIJ",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/01/29/f8/17696857529a6cea3642bab68b57251d6723fe39f1_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/01/29/f6/17696857536f7a040635a2d94efbdb98ea7d032355_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/01/29/98/17696857537825b53724688bb31e9ce55a701cd530_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/01/29/15/1769685753bd509efd81fa73cdd8b926ccd5d02bda_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/01/29/86/17696857531a4d29a6677f91411e92e0ed779b25d0_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/01/29/5c/17696857530200999e15ec3eded8c2e4ffc0e55726_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/01/29/93/17696857532dd51be41443e525b3c1d807183e9ceb_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "72",
+        "inStock": null
+      },
+      {
+        "label": "S",
+        "inStock": null
+      },
+      {
+        "label": "M",
+        "inStock": null
+      },
+      {
+        "label": "L",
+        "inStock": null
+      },
+      {
+        "label": "XL",
+        "inStock": null
+      },
+      {
+        "label": "16",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "72,37Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "92,07Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "186236312",
+      "categoryId": "1860",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdNHIgCW6d_8_1&localcountry=RO&shc=2_lAdNHIgCW6d&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/Sandalecutoc%C3%AEnaltstiletto,cuv%C3%A2rfascu%C8%9Bit,pentrufemei,deprim%C4%83var%C4%83-var%C4%83,cudesigncucataram%C4%83,tocuri%C3%AEnalteverzistr%C4%83lucitoare,potrivitepentruHalloween,Cr%C4%83ciun,%C8%9BinutecasualdeAnulNou-p-27229388-cat-1751.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/Sandalecutoc%C3%AEnaltstiletto,cuv%C3%A2rfascu%C8%9Bit,pentrufemei,deprim%C4%83var%C4%83-var%C4%83,cudesigncucataram%C4%83,tocuri%C3%AEnalteverzistr%C4%83lucitoare,potrivitepentruHalloween,Cr%C4%83ciun,%C8%9BinutecasualdeAnulNou-p-27229388-cat-1751.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Sandale cu toc înalt stiletto, cu vârf ascuțit, pentru femei, de primăvară/vară, cu design cu cataramă, tocuri înalte verzi strălucitoare, potrivite pentru Halloween, Crăciun, ținute casual de Anul Nou",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/images3_pi/2023/12/05/7d/1701782433c76fdafdd846078af04df630a59ec7e8_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2023/12/05/a5/1701782436b41f3af962950f3c42842c11b1357510_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2023/12/05/96/170178244031951839f049ac164604757a8c2d7131_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2023/12/05/7c/170178244483f7733f833928177e972ac1f6db65b8_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2023/12/05/8a/1701782448ee17a4e3f3d89d6eeb7b8e61fef930ff_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "21",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "96,89Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "128,98Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "27229388",
+      "categoryId": "1751",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdNU2aqm0A_8_1&localcountry=RO&shc=2_lAdNU2aqm0A&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/Sandalecutoc%C3%AEnaltdecoratecustrasuri,potrivitepentru%C8%9Binutecasualdezicuzi%C3%AEntimpulverii-p-41552568-cat-1751.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/Sandalecutoc%C3%AEnaltdecoratecustrasuri,potrivitepentru%C8%9Binutecasualdezicuzi%C3%AEntimpulverii-p-41552568-cat-1751.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Sandale cu toc înalt decorate cu strasuri, potrivite pentru ținute casual de zi cu zi în timpul verii",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/images3_pi/2022/11/05/16676429505f2861ff64c6b080347e598f30f7682a_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2022/11/05/1667642952ba4f3bec8b410f15baa4b39cb8af0e0b_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2022/11/05/1667642953f63df6943cf04c28c52d300d5ad8307f_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2022/11/05/16676429548d797635e260c0ebb34458752b95ff46_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2022/11/05/1667642955537f3711c779cf008f1fb37481e31801_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2022/11/05/16676429573028484fb384c42d1e25dc9bd55773b8_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2022/11/05/16676429596b2185256cc6c13a07a1b55e11f52412_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_pi/2022/11/05/1667642960690b320a31d8ee5ec25a65a0038b2a22_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "19",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "86,91Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "115,58Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "41552568",
+      "categoryId": "1751",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAds261T6hk_8_1&localcountry=RO&shc=2_lAds261T6hk&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/Decorcustrasuripentrufemei.Modaademenitoare.Sandaleromane,confortabile,cutoc%C3%AEnalt,cucurealaglezn%C4%83,cutocurigroase,potrivitepentrupetrecere,sear%C4%83saugal%C4%83-p-47615042-cat-1751.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/Decorcustrasuripentrufemei.Modaademenitoare.Sandaleromane,confortabile,cutoc%C3%AEnalt,cucurealaglezn%C4%83,cutocurigroase,potrivitepentrupetrecere,sear%C4%83saugal%C4%83-p-47615042-cat-1751.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Decor cu strasuri pentru femei. Moda ademenitoare. Sandale romane, confortabile, cu toc înalt, cu curea la gleznă, cu tocuri groase, potrivite pentru petrecere, seară sau gală",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/images3_spmp/2024/11/12/99/1731403244aaf0446b1b78b656efbd1f1a0176725c_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_spmp/2024/11/12/99/173140324492095cc66de2046883a4c7b052981127_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_spmp/2024/11/12/8d/1731403256f82792c2825535aebce12bdd93abf075_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_spmp/2024/11/12/8d/173140325685e2d832a12c432d42c1178277ded0ec_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/images3_spmp/2024/11/12/8d/1731403256832d29b5114dad940b25f1464aee6217_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "20",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "89,75Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "79,75Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "47615042",
+      "categoryId": "1751",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "trendyol",
+    "status": "ok",
+    "inputUrl": "https://ty.gl/uf7ntqhrbhmp5",
+    "resolvedUrl": "https://www.trendyol.com/ro/u-s-polo-assn/slip-de-dama-negru-alb-maro-pachet-de-3-p-1080747683?choiceNNEnabled=true&boutiqueId=61&merchantId=104906&adjust_t=mk12x3o_m4o2h83&adjust_tracker_limit=999999999&utm_term=192921484&adjust_campaign=product_free_2026331_RO&utm_source=share&link_userID=192921484&adjust_adgroup=192921484&utm_medium=product_free&adjust_creative=1080747683&link_contentid=1080747683&utm_campaign=1080747683",
+    "productUrl": "https://www.trendyol.com/ro/u-s-polo-assn/slip-de-dama-negru-alb-maro-pachet-de-3-p-1080747683?choiceNNEnabled=true&boutiqueId=61&merchantId=104906&adjust_t=mk12x3o_m4o2h83&adjust_tracker_limit=999999999&utm_term=192921484&adjust_campaign=product_free_2026331_RO&utm_source=share&link_userID=192921484&adjust_adgroup=192921484&utm_medium=product_free&adjust_creative=1080747683&link_contentid=1080747683&utm_campaign=1080747683",
+    "name": "U.S. Polo Assn. Slip de damă negru - alb - maro, pachet de 3",
+    "brand": "U.S. Polo Assn.",
+    "description": "Pe Trendyol, ai Slip de damă negru - alb - maro, pachet de 3 de la U.S. Polo Assn. la prețuri foarte bune. Cumpără acum cele mai trendy articole!",
+    "images": [
+      "https://cdn.dsmcdn.com/ty1808/prod/QC_PREP/20260106/14/b5cbf596-1792-32f8-8bb3-ec1cd3a897d0/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1808/prod/QC_PREP/20260106/14/0c869173-3445-32df-a427-68a98b75c570/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1808/prod/QC_PREP/20260106/14/be824060-4900-3c48-8e12-02b5a983f44a/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1808/prod/QC_PREP/20260106/14/c85dc00a-32d6-396b-a69b-2af0298c4624/1_org_zoom.jpg"
+    ],
+    "sizes": [
+      {
+        "label": "36",
+        "inStock": true,
+        "itemNumber": 1493322813,
+        "priceText": "36,12 Lei"
+      },
+      {
+        "label": "38",
+        "inStock": true,
+        "itemNumber": 1493323055,
+        "priceText": "36,12 Lei"
+      },
+      {
+        "label": "40",
+        "inStock": true,
+        "itemNumber": 1493321235,
+        "priceText": "36,12 Lei"
+      },
+      {
+        "label": "42",
+        "inStock": false,
+        "itemNumber": 1493323438,
+        "priceText": "36,12 Lei"
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": 36.12,
+        "text": "36,12 Lei"
+      },
+      "original": {
+        "value": 144.91,
+        "text": "144,91 Lei"
+      },
+      "discountPercentage": 75
+    },
+    "attributes": [
+      {
+        "name": "Culoare",
+        "value": "Alb",
+        "description": ""
+      },
+      {
+        "name": "Talie",
+        "value": "Talie normală",
+        "description": ""
+      },
+      {
+        "name": "Model",
+        "value": "Simplu",
+        "description": ""
+      },
+      {
+        "name": "Tipul de material",
+        "value": "Knit",
+        "description": ""
+      },
+      {
+        "name": "Colecția",
+        "value": "Lenjerie intimă",
+        "description": ""
+      },
+      {
+        "name": "Conținutul pachetului",
+        "value": "3 buc",
+        "description": ""
+      },
+      {
+        "name": "Compoziția materialului",
+        "value": "95% Bumbac, 5% Elastan",
+        "description": ""
+      },
+      {
+        "name": "Ocazie",
+        "value": "Îmbrăcăminte de relaxare",
+        "description": ""
+      },
+      {
+        "name": "Detalii privind durabilitatea",
+        "value": "Nu",
+        "description": ""
+      },
+      {
+        "name": "Origine",
+        "value": "TR",
+        "description": ""
+      },
+      {
+        "name": "Instrucțiuni de îngrijire",
+        "value": "Tipul 1",
+        "description": ""
+      }
+    ],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "trendyol": {
+      "id": 1080747683,
+      "productGroupId": 62348687,
+      "merchantName": "MOD COLLECTION",
+      "merchantId": 104906,
+      "category": "Chiloți",
+      "color": "Negru - Alb - Piele",
+      "favoriteCount": 457,
+      "ratingAverage": 5,
+      "ratingCount": 1
+    }
+  },
+  {
+    "source": "trendyol",
+    "status": "ok",
+    "inputUrl": "https://ty.gl/ypxor0nxatwm0",
+    "resolvedUrl": "https://www.trendyol.com/ro/u-s-polo-assn/slip-negru-pentru-femei-negru-negru-pachet-de-3-p-1080747667?choiceNNEnabled=true&boutiqueId=61&merchantId=104906&adjust_t=mk12x3o_m4o2h83&adjust_tracker_limit=999999999&link_contentid=1080747667&link_userID=192921484&adjust_creative=1080747667&utm_term=192921484&adjust_adgroup=192921484&utm_campaign=1080747667&adjust_campaign=product_free_2026331_RO&utm_source=share&utm_medium=product_free",
+    "productUrl": "https://www.trendyol.com/ro/u-s-polo-assn/slip-negru-pentru-femei-negru-negru-pachet-de-3-p-1080747667?choiceNNEnabled=true&boutiqueId=61&merchantId=104906&adjust_t=mk12x3o_m4o2h83&adjust_tracker_limit=999999999&link_contentid=1080747667&link_userID=192921484&adjust_creative=1080747667&utm_term=192921484&adjust_adgroup=192921484&utm_campaign=1080747667&adjust_campaign=product_free_2026331_RO&utm_source=share&utm_medium=product_free",
+    "name": "U.S. Polo Assn. Slip negru pentru femei - Negru - Negru, pachet de 3",
+    "brand": "U.S. Polo Assn.",
+    "description": "Pe Trendyol, ai Slip negru pentru femei - Negru - Negru, pachet de 3 de la U.S. Polo Assn. la prețuri foarte bune. Cumpără acum cele mai trendy articole!",
+    "images": [
+      "https://cdn.dsmcdn.com/ty1807/prod/QC_PREP/20260106/14/3fc44dc3-7fe5-37a4-9e9f-0cc5de11ea56/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1807/prod/QC_PREP/20260106/14/d532bd29-1877-3adc-afc1-9a128f098a85/1_org_zoom.jpg"
+    ],
+    "sizes": [
+      {
+        "label": "36",
+        "inStock": true,
+        "itemNumber": 1493323097,
+        "priceText": "48,16 Lei"
+      },
+      {
+        "label": "38",
+        "inStock": true,
+        "itemNumber": 1493323562,
+        "priceText": "48,16 Lei"
+      },
+      {
+        "label": "40",
+        "inStock": true,
+        "itemNumber": 1493322868,
+        "priceText": "48,16 Lei"
+      },
+      {
+        "label": "42",
+        "inStock": true,
+        "itemNumber": 1493321207,
+        "priceText": "48,16 Lei"
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": 48.16,
+        "text": "48,16 Lei"
+      },
+      "original": {
+        "value": 144.91,
+        "text": "144,91 Lei"
+      },
+      "discountPercentage": 66
+    },
+    "attributes": [
+      {
+        "name": "Culoare",
+        "value": "Negru",
+        "description": ""
+      },
+      {
+        "name": "Talie",
+        "value": "Talie normală",
+        "description": ""
+      },
+      {
+        "name": "Model",
+        "value": "Simplu",
+        "description": ""
+      },
+      {
+        "name": "Tipul de material",
+        "value": "Knit",
+        "description": ""
+      },
+      {
+        "name": "Colecția",
+        "value": "Lenjerie intimă",
+        "description": ""
+      },
+      {
+        "name": "Conținutul pachetului",
+        "value": "3 buc",
+        "description": ""
+      },
+      {
+        "name": "Compoziția materialului",
+        "value": "95% Bumbac, 5% Elastan",
+        "description": ""
+      },
+      {
+        "name": "Ocazie",
+        "value": "Îmbrăcăminte de relaxare",
+        "description": ""
+      },
+      {
+        "name": "Detalii privind durabilitatea",
+        "value": "Nu",
+        "description": ""
+      },
+      {
+        "name": "Origine",
+        "value": "TR",
+        "description": ""
+      },
+      {
+        "name": "Instrucțiuni de îngrijire",
+        "value": "Tipul 1",
+        "description": ""
+      }
+    ],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "trendyol": {
+      "id": 1080747667,
+      "productGroupId": 62348687,
+      "merchantName": "MOD COLLECTION",
+      "merchantId": 104906,
+      "category": "Chiloți",
+      "color": "Negru",
+      "favoriteCount": 304,
+      "ratingAverage": 0,
+      "ratingCount": 0
+    }
+  },
+  {
+    "source": "trendyol",
+    "status": "ok",
+    "inputUrl": "https://ty.gl/ow76iv35umv3d",
+    "resolvedUrl": "https://www.trendyol.com/ro/u-s-polo-assn/negru-alb-maro-fucsia-bleumarin-pachet-5-slip-brazilian-p-749158828?choiceNNEnabled=true&boutiqueId=61&merchantId=693652&adjust_t=mk12x3o_m4o2h83&adjust_tracker_limit=999999999&adjust_campaign=product_free_2026331_RO&utm_campaign=749158828&utm_term=192921484&link_contentid=749158828&utm_source=share&utm_medium=product_free&link_userID=192921484&adjust_adgroup=192921484&adjust_creative=749158828",
+    "productUrl": "https://www.trendyol.com/ro/u-s-polo-assn/negru-alb-maro-fucsia-bleumarin-pachet-5-slip-brazilian-p-749158828?choiceNNEnabled=true&boutiqueId=61&merchantId=693652&adjust_t=mk12x3o_m4o2h83&adjust_tracker_limit=999999999&adjust_campaign=product_free_2026331_RO&utm_campaign=749158828&utm_term=192921484&link_contentid=749158828&utm_source=share&utm_medium=product_free&link_userID=192921484&adjust_adgroup=192921484&adjust_creative=749158828",
+    "name": "U.S. Polo Assn. Negru - Alb - Maro - Fucsia - Bleumarin Pachet 5 Slip Brazilian",
+    "brand": "U.S. Polo Assn.",
+    "description": "Pe Trendyol, ai Negru - Alb - Maro - Fucsia - Bleumarin Pachet 5 Slip Brazilian de la U.S. Polo Assn. la prețuri foarte bune. Cumpără acum cele mai trendy articole!",
+    "images": [
+      "https://cdn.dsmcdn.com/ty1417/product/media/images/prod/QC/20240712/15/65f281a5-09d2-3849-a762-12efa22e09d2/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1417/product/media/images/prod/QC/20240712/15/5e4e79d6-e602-34eb-b88d-a2ce6e52c4e8/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1418/product/media/images/prod/QC/20240712/15/8513b331-714f-3154-a333-8030cdaabbf0/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1417/product/media/images/prod/QC/20240712/15/2dec6513-3be4-3db4-9ae7-5da568fa71b9/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1416/product/media/images/prod/QC/20240712/15/531a19c3-4b7c-31a4-85c8-9603f730b1d6/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1418/product/media/images/prod/QC/20240712/15/d431fec0-e5c3-350d-9397-460c908f3880/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1417/product/media/images/prod/QC/20240712/15/ba64830e-2156-3a3a-837e-62fd6f801f2a/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1417/product/media/images/prod/QC/20240712/15/505e6141-22a0-3aec-8e48-7a06c84ed4e9/1_org_zoom.jpg"
+    ],
+    "sizes": [
+      {
+        "label": "36",
+        "inStock": true,
+        "itemNumber": 986330255,
+        "priceText": "54,71 Lei"
+      },
+      {
+        "label": "38",
+        "inStock": true,
+        "itemNumber": 986330256,
+        "priceText": "54,71 Lei"
+      },
+      {
+        "label": "40",
+        "inStock": true,
+        "itemNumber": 986330252,
+        "priceText": "54,71 Lei"
+      },
+      {
+        "label": "44",
+        "inStock": true,
+        "itemNumber": 986330254,
+        "priceText": "54,71 Lei"
+      },
+      {
+        "label": "42",
+        "inStock": true,
+        "itemNumber": 986330253,
+        "priceText": "54,71 Lei"
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": 54.71,
+        "text": "54,71 Lei"
+      },
+      "original": {
+        "value": 157.31,
+        "text": "157,31 Lei"
+      },
+      "discountPercentage": 65
+    },
+    "attributes": [
+      {
+        "name": "Culoare",
+        "value": "Multicolor",
+        "description": ""
+      },
+      {
+        "name": "Talie",
+        "value": "Talie normală",
+        "description": ""
+      },
+      {
+        "name": "Material",
+        "value": "Modal",
+        "description": ""
+      },
+      {
+        "name": "Model",
+        "value": "Simplu",
+        "description": ""
+      },
+      {
+        "name": "Tipul de material",
+        "value": "Knit",
+        "description": ""
+      },
+      {
+        "name": "Colecția",
+        "value": "Lenjerie intimă",
+        "description": ""
+      },
+      {
+        "name": "Conținutul pachetului",
+        "value": "5 buc",
+        "description": ""
+      },
+      {
+        "name": "Compoziția materialului",
+        "value": "47% Bumbac, 47% Modal, 6% Elastan",
+        "description": ""
+      },
+      {
+        "name": "Ocazie",
+        "value": "De zi cu zi",
+        "description": ""
+      },
+      {
+        "name": "Detalii privind durabilitatea",
+        "value": "Nu",
+        "description": ""
+      },
+      {
+        "name": "Origine",
+        "value": "TR",
+        "description": ""
+      },
+      {
+        "name": "Instrucțiuni de îngrijire",
+        "value": "Prima spălare Prima spălare singur, se poate decolora. Temperatura apei: Spălați la rece sau la maximum 30°C. Program de spălare: Delicat, ciclu redus. Detergent: Utilizați un detergent delicat, fără înălbitor. Spălați pe dos: Spălați pe dos pentru a preveni decolorarea culorilor. Spălați cu culori asemănătoare: Spălați separat culorile deschise și cele închise la culoare.",
+        "description": ""
+      }
+    ],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "trendyol": {
+      "id": 749158828,
+      "productGroupId": 109175337,
+      "merchantName": "Pijamanya",
+      "merchantId": 693652,
+      "category": "Chiloți",
+      "color": "Negru",
+      "favoriteCount": 0,
+      "ratingAverage": 5,
+      "ratingCount": 3
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdWajBgNau_8_1&localcountry=RO&shc=2_lAdWajBgNau&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/Po%C8%99et%C4%83desear%C4%83%C8%99igeant%C4%83depetrecerecupaietestr%C4%83lucitoare,po%C8%99et%C4%83depetrecerepentrudoamnelamod%C4%83,designdenunt%C4%83%C3%AEnform%C4%83deVpentrumireas%C4%83,setde3bijuteriidinstrasstr%C4%83lucitorasortat:colierelegantcupandantiv%C3%AEnform%C4%83deY,cercei%C8%99ibr%C4%83%C8%9Bar%C4%83,potrivitpentrufetecareparticip%C4%83lapetreceri,nun%C8%9Bi%C8%99ievenimentedesear%C4%83.-p-327772019-cat-2153.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/Po%C8%99et%C4%83desear%C4%83%C8%99igeant%C4%83depetrecerecupaietestr%C4%83lucitoare,po%C8%99et%C4%83depetrecerepentrudoamnelamod%C4%83,designdenunt%C4%83%C3%AEnform%C4%83deVpentrumireas%C4%83,setde3bijuteriidinstrasstr%C4%83lucitorasortat:colierelegantcupandantiv%C3%AEnform%C4%83deY,cercei%C8%99ibr%C4%83%C8%9Bar%C4%83,potrivitpentrufetecareparticip%C4%83lapetreceri,nun%C8%9Bi%C8%99ievenimentedesear%C4%83.-p-327772019-cat-2153.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Poșetă de seară și geantă de petrecere cu paiete strălucitoare, poșetă de petrecere pentru doamne la modă, design de nuntă în formă de V pentru mireasă, set de 3 bijuterii din stras strălucitor asortat: colier elegant cu pandantiv în formă de Y, cercei și brățară, potrivit pentru fete care participă la petreceri, nunți și evenimente de seară.",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/12/13/7e/17656103813b5052da659e1a4e39ee22bfe7fb21a0_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/12/13/d2/17656105315a33484f8c5d8c08dcc24e69653b3512_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/12/13/23/1765610381f3a7b5201d5e1f15c681a93ba37f35a7_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/12/13/21/1765610606fc0525a963d66654e852563276ac02bd_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/12/13/1b/17656106413a04dc44fb265e11e6533bfe983a90be_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/12/13/62/1765610572d091e1cfb6363904b136a308697fbbad_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/12/13/4b/1765610606b02678ca597aa51267457058baca4ae2_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/12/13/21/176561061304efb9082b1905fe064db8956fb42520_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/12/13/bb/17656105315c92919c375d2793c2c6c83d7090b707_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "29",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "29,48Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "45,00Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "327772019",
+      "categoryId": "2153",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdFNrMDj0V_8_1&localcountry=RO&shc=2_lAdFNrMDj0V&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/Setde5buc%C4%83%C8%9Bi-setdecolier,br%C4%83%C8%9Bar%C4%83,inel%C8%99icercei,elegant,custrasuripentrufemei,perfectpentrupurtareazilnic%C4%83,petrecere,festival%C8%99icadoupentrufemei.-p-33622107-cat-1756.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/Setde5buc%C4%83%C8%9Bi-setdecolier,br%C4%83%C8%9Bar%C4%83,inel%C8%99icercei,elegant,custrasuripentrufemei,perfectpentrupurtareazilnic%C4%83,petrecere,festival%C8%99icadoupentrufemei.-p-33622107-cat-1756.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Set de 5 bucăți/set de colier, brățară, inel și cercei, elegant, cu strasuri pentru femei, perfect pentru purtarea zilnică, petrecere, festival și cadou pentru femei.",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/images3_spmp/2024/04/11/df/171282378955ea02f488c993f1c19b89cf88133b13_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "19,78Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "13,13Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "33622107",
+      "categoryId": "1756",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdFrIGxGv1_8_1&localcountry=RO&shc=2_lAdFrIGxGv1&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/Setcadoucu5ceasuridedam%C4%83,br%C4%83%C8%9Bar%C4%83dino%C8%9Belromanauriusetdeinelep%C4%83trate,purtarezilnic%C4%83casual%C8%99iversatil%C4%83,potrivit%C4%83ca%C8%99icadoudes%C4%83rb%C4%83toripentrufemei-p-225220020-cat-3031.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/Setcadoucu5ceasuridedam%C4%83,br%C4%83%C8%9Bar%C4%83dino%C8%9Belromanauriusetdeinelep%C4%83trate,purtarezilnic%C4%83casual%C8%99iversatil%C4%83,potrivit%C4%83ca%C8%99icadoudes%C4%83rb%C4%83toripentrufemei-p-225220020-cat-3031.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Set cadou cu 5 ceasuri de damă, brățară din oțel roman auriu + set de inele pătrate, purtare zilnică casual și versatilă, potrivită ca și cadou de sărbători pentru femei",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/p/spmp/2025/10/03/80/17594552513418673006ba343f37d0f1248f98fdd9_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/13/08/17603461182a67f491307baf4137257f68e59d6f19_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/03/ca/1759455477ec628881ab5f073029e4c22dc72fce89_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/03/b3/1759455553f73210a3ed68c4c0af8c53d19a5f1cf7_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "12",
+        "inStock": null
+      },
+      {
+        "label": "14",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "39,62Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "26,32Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "225220020",
+      "categoryId": "3031",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdFjiONPQA_8_1&localcountry=RO&shc=2_lAdFjiONPQA&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/BijuteriicudiamantepentrudamaSetdebijuteriicudiamantesc%C3%A2nteietoareColiercerceiSetdebr%C4%83%C8%9B%C4%83riGeantapersonalizat%C4%83dincutiedem%C4%83tasedinsatinGeant%C4%83dem%C3%A2n%C4%83Geantadebanchetdemod%C4%83Geantadebanchetdem%C3%A2n%C4%83Portofeldem%C3%A2n%C4%83Geantadebanchetelegant%C4%83dem%C3%A2n%C4%83Geant%C4%83dem%C3%A2n%C4%83pentrudoamn%C4%83Geant%C4%83debanchetdemireas%C4%83pentrudam%C4%83Geant%C4%83dem%C3%A2n%C4%83culan%C8%9BdemetalPo%C8%99t%C4%83dem%C3%A2n%C4%83Petreceredenunt%C4%83Geantadem%C3%A2n%C4%83Banchetdenunt%C4%83NouPortofel-p-65305943-cat-1756.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/BijuteriicudiamantepentrudamaSetdebijuteriicudiamantesc%C3%A2nteietoareColiercerceiSetdebr%C4%83%C8%9B%C4%83riGeantapersonalizat%C4%83dincutiedem%C4%83tasedinsatinGeant%C4%83dem%C3%A2n%C4%83Geantadebanchetdemod%C4%83Geantadebanchetdem%C3%A2n%C4%83Portofeldem%C3%A2n%C4%83Geantadebanchetelegant%C4%83dem%C3%A2n%C4%83Geant%C4%83dem%C3%A2n%C4%83pentrudoamn%C4%83Geant%C4%83debanchetdemireas%C4%83pentrudam%C4%83Geant%C4%83dem%C3%A2n%C4%83culan%C8%9BdemetalPo%C8%99t%C4%83dem%C3%A2n%C4%83Petreceredenunt%C4%83Geantadem%C3%A2n%C4%83Banchetdenunt%C4%83NouPortofel-p-65305943-cat-1756.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Bijuterii cu diamante pentru dama Set de bijuterii cu diamante scânteietoare Colier cercei Set de brățări Geanta personalizată din cutie de mătase din satin Geantă de mână Geanta de banchet de modă Geanta de banchet de mână Portofel de mână Geanta de banchet elegantă de mână Geantă de mână pentru doamnă Geantă de banchet de mireasă pentru damă Geantă de mână cu lanț de metal Poștă de mână Petrecere de nuntă Geanta de mână Banchet de nuntă Nou Portofel",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/04/03/bf/174368925659b03e6be3c31b57eee686758ae0b579_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "14",
+        "inStock": null
+      },
+      {
+        "label": "11",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "26,04Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "12,74Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "65305943",
+      "categoryId": "1756",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdFbTf3Qnb_8_1&localcountry=RO&shc=2_lAdFbTf3Qnb&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/SetdebijuteriicustrassColierBlingCerceiSetdebrataripentrufemeiPochettedesearaNuntadenuntastralucitoareCristaldefloarea-soareluiPo%C8%99etadedecorarecudiamantepentrufemeiBaldeabsolvireculan%C8%9Bmetalicdetasabilpentrununt%C4%83%C8%99ipetrecereGeant%C4%83deum%C4%83rpentrufemeiPo%C8%99etepentrudoamneGeantadesear%C4%83pentrufemeiGeant%C4%83desear%C4%83portabil%C4%83pentrufemeiVersatil%C4%83,cusclipici,geant%C4%83pentrupetreceredenunt%C4%83.-p-67419623-cat-1756.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/SetdebijuteriicustrassColierBlingCerceiSetdebrataripentrufemeiPochettedesearaNuntadenuntastralucitoareCristaldefloarea-soareluiPo%C8%99etadedecorarecudiamantepentrufemeiBaldeabsolvireculan%C8%9Bmetalicdetasabilpentrununt%C4%83%C8%99ipetrecereGeant%C4%83deum%C4%83rpentrufemeiPo%C8%99etepentrudoamneGeantadesear%C4%83pentrufemeiGeant%C4%83desear%C4%83portabil%C4%83pentrufemeiVersatil%C4%83,cusclipici,geant%C4%83pentrupetreceredenunt%C4%83.-p-67419623-cat-1756.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Set de bijuterii cu strass Colier Bling Cercei Set de bratari pentru femei Pochette de seara Nunta de nunta stralucitoare Cristal de floarea-soarelui Poșeta de decorare cu diamante pentru femei Bal de absolvire cu lanț metalic detasabil pentru nuntă și petrecere Geantă de umăr pentru femei Poșete pentru doamne Geanta de seară pentru femei Geantă de seară portabilă pentru femei Versatilă, cu sclipici, geantă pentru petrecere de nuntă.",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/04/13/56/1744550694db15da458e24b755468830efeaabd977_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "14",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "30,67Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "17,37Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "67419623",
+      "categoryId": "1756",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdMYZl05RI_8_1&localcountry=RO&shc=2_lAdMYZl05RI&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/Setdebijuteriideluxcudiamantestr%C4%83lucitoare-colier,cercei,br%C4%83%C8%9Bar%C4%83,geant%C4%83plicmetalic%C4%83%C3%AEnform%C4%83deVcupaieteargintiistr%C4%83lucitoare,geant%C4%83desear%C4%83elegant%C4%83,geant%C4%83demireas%C4%83pentrupetreceredenunt%C4%83,geant%C4%83dem%C3%A2n%C4%83pentrucocktailuri,portofelnoudenunt%C4%83,geant%C4%83depetrecere-p-223304598-cat-1756.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/Setdebijuteriideluxcudiamantestr%C4%83lucitoare-colier,cercei,br%C4%83%C8%9Bar%C4%83,geant%C4%83plicmetalic%C4%83%C3%AEnform%C4%83deVcupaieteargintiistr%C4%83lucitoare,geant%C4%83desear%C4%83elegant%C4%83,geant%C4%83demireas%C4%83pentrupetreceredenunt%C4%83,geant%C4%83dem%C3%A2n%C4%83pentrucocktailuri,portofelnoudenunt%C4%83,geant%C4%83depetrecere-p-223304598-cat-1756.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "Set de bijuterii de lux cu diamante strălucitoare - colier, cercei, brățară, geantă plic metalică în formă de V cu paiete argintii strălucitoare, geantă de seară elegantă, geantă de mireasă pentru petrecere de nuntă, geantă de mână pentru cocktailuri, portofel nou de nuntă, geantă de petrecere",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/16/d3/1760593413e151fcc961190b35a0b3cc91ccf0750e_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/16/15/176059341234bf4ad83f787d6bcab59a4774e2d9de_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/16/75/1760593216657e57bc1810aed76561fc88bf99f324_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/16/55/176059321843e90a9b1f863f3fe2968e7d301b859d_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/16/b0/1760593218498b826f45880c8b5df2fdc1837466f5_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/16/79/17605932135ad473f6a3a142fc5d9cf9739f05833a_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/16/a0/17605932147fef408905e362afc1a72c099c1b138b_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/16/53/176059321387879c76c4f9a25e64132dd9526ea1de_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/16/9d/1760593412093e6ea933f269e86543791090e90a62_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/10/16/45/1760593209365e5840df2b5385b08b9fd78c9f9e7b_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "34",
+        "inStock": null
+      },
+      {
+        "label": "14",
+        "inStock": null
+      },
+      {
+        "label": "11",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "34,44Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "44,33Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "223304598",
+      "categoryId": "1756",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  },
+  {
+    "source": "shein",
+    "status": "ok",
+    "inputUrl": "https://api-shein.shein.com/h5/sharejump/appjump?link=lAdMFmeSyZc_8_1&localcountry=RO&shc=2_lAdMFmeSyZc&url_from=GM74515328644",
+    "resolvedUrl": "https://ro.shein.com/1setceascompactcucuar%C8%9Bauriulamod%C4%83%C8%99ibr%C4%83%C8%9Bar%C4%83custrasuricuinim%C4%83auriepentruadolescen%C8%9Bi,carcas%C4%83%C8%99icureadinaliaj,baterienere%C3%AEnc%C4%83rcabil%C4%83,potrivitca%C8%99icadoupentru%C3%AEntoarcereala%C8%99coal%C4%83,articolversatil,dimensiunecureareglabil%C4%83-p-400151088-cat-9278.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "productUrl": "https://ro.shein.com/1setceascompactcucuar%C8%9Bauriulamod%C4%83%C8%99ibr%C4%83%C8%9Bar%C4%83custrasuricuinim%C4%83auriepentruadolescen%C8%9Bi,carcas%C4%83%C8%99icureadinaliaj,baterienere%C3%AEnc%C4%83rcabil%C4%83,potrivitca%C8%99icadoupentru%C3%AEntoarcereala%C8%99coal%C4%83,articolversatil,dimensiunecureareglabil%C4%83-p-400151088-cat-9278.html?cdn_rsite=cf&ref=www&rep=dir&ret=ro",
+    "name": "1 set ceas compact cu cuarț auriu la modă și brățară cu strasuri cu inimă aurie pentru adolescenți, carcasă și curea din aliaj, baterie nereîncărcabilă, potrivit ca și cadou pentru întoarcerea la școală, articol versatil, dimensiune curea reglabilă",
+    "brand": "SHEIN",
+    "description": "De la încălțăminte la îmbrăcăminte, de la echipamente sportive la accesorii. Toate inspirațiile de modă și ultimele tendințe pot fi găsite online la SHEIN",
+    "images": [
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/02/06/77/1770343009a07ec7c1559259f9309e8cdf041c895b_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/02/09/4a/1770602481a92d97e0b06ddd8301324a67da1309d3_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/01/31/9d/17698286326d82f5683f341e3e307de213da9039d6_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/01/31/18/1769828643a082ca09c38bc2504d6d110cec777d32_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/j/spmp/2026/01/31/aa/17698286538cfac57da1492177b11ad708657b0096_thumbnail_900x.webp",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/cf/1755589481d2f7cbc9d24acc16d2ce80aedd80fd00.png",
+      "https://img.ltwebstatic.com/v4/p/ccc/2025/08/19/36/175558944520369688e1323a7ead801db00a10ace1.png"
+    ],
+    "sizes": [
+      {
+        "label": "16",
+        "inStock": null
+      },
+      {
+        "label": "14",
+        "inStock": null
+      }
+    ],
+    "price": {
+      "currency": "RON",
+      "current": {
+        "value": null,
+        "text": "16,52Lei"
+      },
+      "original": {
+        "value": null,
+        "text": "16,78Lei"
+      }
+    },
+    "attributes": [],
+    "challengeRequired": false,
+    "manualActionRequired": false,
+    "errors": [],
+    "shein": {
+      "shareId": "400151088",
+      "categoryId": "9278",
+      "shareType": "goods",
+      "interactiveModeUsed": true
+    }
+  }
+]

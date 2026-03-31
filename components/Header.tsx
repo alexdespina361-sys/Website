@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useCart } from "@/lib/CartContext";
 import { getSupabaseBrowserClient } from "@/lib/supabase";
 import Icon from "@/components/Icon";
+import { SITE_WORDMARK } from "@/lib/site";
 
 const navLinks = [
   { href: "/shop", label: "Colecții" },
@@ -63,7 +64,7 @@ export default function Header() {
         href="/"
         className="text-2xl font-serif tracking-tighter text-[#1a1c1c] font-black cursor-pointer hover:opacity-80 transition-opacity"
       >
-        RED STUDIO
+        {SITE_WORDMARK}
       </Link>
       <div className="flex-1 flex justify-end items-center gap-6">
         <Link

@@ -1,15 +1,7 @@
 import { NextResponse } from "next/server";
 import { createSupabaseAdminClient } from "@/lib/supabase-server";
 import { requireAdminUser } from "@/lib/admin-guard";
-
-interface VariantPayload {
-  size: string;
-  color: string;
-  price_cents: number;
-  compare_at_price_cents?: number | null;
-  stock: number;
-  sku?: string | null;
-}
+import { normalizeImages, normalizeVariants } from "@/lib/admin-product-payload";
 
 async function assertAdmin() {
   const adminAccess = await requireAdminUser();
@@ -63,10 +55,12 @@ export async function PUT(
     name,
     slug,
     description,
+    category_group,
     category,
     material,
     season,
     is_archived,
+    images,
     image_url,
     image_alt_text,
     variants,
@@ -79,9 +73,10 @@ export async function PUT(
       name,
       slug,
       description,
-      category,
-      material,
-      season,
+      category_group: category_group || null,
+      category: category || null,
+      material: material || null,
+      season: season || null,
       is_archived: Boolean(is_archived),
       updated_at: new Date().toISOString(),
     })
@@ -93,14 +88,7 @@ export async function PUT(
 
   await supabase.from("product_variants").delete().eq("product_id", params.id);
 
-  const normalizedVariants = Array.isArray(variants)
-    ? (variants as VariantPayload[]).filter(
-        (variant) =>
-          (variant.size || variant.color) &&
-          Number.isFinite(variant.price_cents) &&
-          variant.price_cents > 0
-      )
-    : [];
+  const normalizedVariants = normalizeVariants(variants);
 
   if (normalizedVariants.length > 0) {
     const { error: variantsError } = await supabase
@@ -124,13 +112,22 @@ export async function PUT(
 
   await supabase.from("product_images").delete().eq("product_id", params.id);
 
-  if (image_url) {
-    const { error: imageError } = await supabase.from("product_images").insert({
-      product_id: params.id,
-      url: image_url,
-      alt_text: image_alt_text || name,
-      sort_order: 0,
-    });
+  const normalizedImages = normalizeImages({
+    images,
+    image_url,
+    image_alt_text,
+    defaultAltText: name,
+  });
+
+  if (normalizedImages.length > 0) {
+    const { error: imageError } = await supabase.from("product_images").insert(
+      normalizedImages.map((image) => ({
+        product_id: params.id,
+        url: image.url,
+        alt_text: image.alt_text || name,
+        sort_order: image.sort_order || 0,
+      }))
+    );
 
     if (imageError) {
       return NextResponse.json({ error: imageError.message }, { status: 500 });

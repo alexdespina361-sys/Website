@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import { useToast } from "@/components/ToastProvider";
+import { SITE_DESCRIPTION, SITE_WORDMARK } from "@/lib/site";
 
 export default function Footer() {
   const { showToast } = useToast();
@@ -12,13 +13,13 @@ export default function Footer() {
       await navigator.clipboard.writeText(window.location.origin);
       showToast({
         title: "Link copiat",
-        description: "Adresa site-ului a fost copiată în clipboard.",
+        description: "Adresa site-ului a fost copiata in clipboard.",
         tone: "success",
       });
     } catch {
       showToast({
-        title: "Copiere eșuată",
-        description: "Nu am putut copia linkul în clipboard.",
+        title: "Copiere esuata",
+        description: "Nu am putut copia linkul in clipboard.",
         tone: "error",
       });
     }
@@ -26,13 +27,13 @@ export default function Footer() {
 
   return (
     <footer className="w-full border-t border-black/5 bg-[#f3f3f4]">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full">
+      <div className="grid w-full grid-cols-1 gap-8 px-12 py-16 md:grid-cols-2">
         <div className="flex flex-col gap-6">
-          <div className="font-serif text-lg text-[#1a1c1c] uppercase tracking-tighter font-black">
-            RED STUDIO
+          <div className="font-serif text-lg font-black uppercase tracking-tighter text-[#1a1c1c]">
+            {SITE_WORDMARK}
           </div>
-          <p className="font-label text-[11px] uppercase tracking-wider leading-loose opacity-60 text-[#1a1c1c]">
-            O curatorie de obiecte și experiențe pentru minimalistul modern.
+          <p className="font-label text-[11px] uppercase leading-loose tracking-wider text-[#1a1c1c] opacity-60">
+            {SITE_DESCRIPTION}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-8">
@@ -41,13 +42,13 @@ export default function Footer() {
               Navigare
             </h4>
             <Link
-              className="font-label text-[11px] uppercase tracking-wider opacity-60 hover:opacity-100 hover:text-primary transition-all duration-300"
+              className="font-label text-[11px] uppercase tracking-wider opacity-60 transition-all duration-300 hover:text-primary hover:opacity-100"
               href="/shop"
             >
-              Colecții
+              Colectii
             </Link>
             <Link
-              className="font-label text-[11px] uppercase tracking-wider opacity-60 hover:opacity-100 hover:text-primary transition-all duration-300"
+              className="font-label text-[11px] uppercase tracking-wider opacity-60 transition-all duration-300 hover:text-primary hover:opacity-100"
               href="/about"
             >
               Editorial
@@ -58,25 +59,25 @@ export default function Footer() {
               Legal
             </h4>
             <Link
-              className="font-label text-[11px] uppercase tracking-wider opacity-60 hover:opacity-100 transition-all duration-300 underline underline-offset-4"
+              className="font-label text-[11px] uppercase tracking-wider opacity-60 underline underline-offset-4 transition-all duration-300 hover:opacity-100"
               href="/terms"
             >
-              Termeni și Condiții
+              Termeni si Conditii
             </Link>
             <Link
-              className="font-label text-[11px] uppercase tracking-wider opacity-60 hover:opacity-100 transition-all duration-300"
+              className="font-label text-[11px] uppercase tracking-wider opacity-60 transition-all duration-300 hover:opacity-100"
               href="/privacy"
             >
-              Confidențialitate
+              Confidentialitate
             </Link>
             <Link
-              className="font-label text-[11px] uppercase tracking-wider opacity-60 hover:opacity-100 transition-all duration-300"
+              className="font-label text-[11px] uppercase tracking-wider opacity-60 transition-all duration-300 hover:opacity-100"
               href="/contact"
             >
               Contact
             </Link>
             <Link
-              className="font-label text-[11px] uppercase tracking-wider opacity-60 hover:opacity-100 transition-all duration-300"
+              className="font-label text-[11px] uppercase tracking-wider opacity-60 transition-all duration-300 hover:opacity-100"
               href="/shipping"
             >
               Livrare
@@ -84,15 +85,15 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="px-12 py-8 border-t border-black/5 flex justify-between items-center">
+      <div className="flex items-center justify-between border-t border-black/5 px-12 py-8">
         <div className="font-label text-[11px] uppercase tracking-wider text-[#1a1c1c] opacity-60">
-          © 2026 RED STUDIO. Toate drepturile rezervate.
+          © 2026 {SITE_WORDMARK}. Toate drepturile rezervate.
         </div>
         <div className="flex gap-8">
           <button
             type="button"
             onClick={handleShare}
-            aria-label="Copiază linkul site-ului"
+            aria-label="Copiaza linkul site-ului"
             className="opacity-60 transition-all duration-300 hover:text-primary hover:opacity-100"
           >
             <Icon name="share" className="h-4 w-4" />

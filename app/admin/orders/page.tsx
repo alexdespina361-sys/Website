@@ -24,7 +24,7 @@ export default function AdminOrdersPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Nu am putut încărca comenzile.");
+        throw new Error(data.error || "Nu am putut incarca comenzile.");
       }
 
       setOrders(data);
@@ -32,7 +32,9 @@ export default function AdminOrdersPage() {
       showToast({
         title: "Eroare admin",
         description:
-          error instanceof Error ? error.message : "Nu am putut încărca comenzile.",
+          error instanceof Error
+            ? error.message
+            : "Nu am putut incarca comenzile.",
         tone: "error",
       });
     } finally {
@@ -61,14 +63,16 @@ export default function AdminOrdersPage() {
       await fetchOrders();
       showToast({
         title: "Status actualizat",
-        description: "Comanda a fost actualizată.",
+        description: "Comanda a fost actualizata.",
         tone: "success",
       });
     } catch (error) {
       showToast({
-        title: "Actualizare eșuată",
+        title: "Actualizare esuata",
         description:
-          error instanceof Error ? error.message : "Nu am putut actualiza statusul.",
+          error instanceof Error
+            ? error.message
+            : "Nu am putut actualiza statusul.",
         tone: "error",
       });
     }
@@ -77,21 +81,21 @@ export default function AdminOrdersPage() {
   return (
     <div>
       <Header />
-      <main className="pt-20 min-h-screen">
-        <section className="px-12 md:px-24 py-32">
+      <main className="min-h-screen pt-20">
+        <section className="px-12 py-32 md:px-24">
           <div className="mb-12">
             <Link
               href="/admin"
-              className="font-label text-[10px] uppercase tracking-widest text-outline hover:text-primary transition-colors mb-2 block"
+              className="mb-2 block font-label text-[10px] uppercase tracking-widest text-outline transition-colors hover:text-primary"
             >
-              ← Înapoi la Dashboard
+              ← Inapoi la dashboard
             </Link>
             <h1 className="font-headline text-5xl">Comenzi</h1>
           </div>
 
           {loading ? (
-            <p className="font-label text-xs uppercase tracking-widest text-outline py-12">
-              Se încarcă comenzile...
+            <p className="py-12 font-label text-xs uppercase tracking-widest text-outline">
+              Se incarca comenzile...
             </p>
           ) : orders.length === 0 ? (
             <div className="bg-surface-container-lowest p-12 text-center">
@@ -100,39 +104,54 @@ export default function AdminOrdersPage() {
                 className="mx-auto mb-6 h-14 w-14 text-outline-variant"
               />
               <p className="font-label text-sm uppercase tracking-widest text-secondary">
-                Nicio comandă încă.
+                Nicio comanda inca.
               </p>
             </div>
           ) : (
-            <div className="bg-surface-container-lowest overflow-x-auto">
+            <div className="overflow-x-auto bg-surface-container-lowest">
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-outline-variant/20">
-                    <th className="text-left p-4 font-label text-[10px] uppercase tracking-widest text-outline">Comandă</th>
-                    <th className="text-left p-4 font-label text-[10px] uppercase tracking-widest text-outline">Client</th>
-                    <th className="text-left p-4 font-label text-[10px] uppercase tracking-widest text-outline">Data</th>
-                    <th className="text-left p-4 font-label text-[10px] uppercase tracking-widest text-outline">Plată</th>
-                    <th className="text-left p-4 font-label text-[10px] uppercase tracking-widest text-outline">Status</th>
-                    <th className="text-right p-4 font-label text-[10px] uppercase tracking-widest text-outline">Total</th>
+                    <th className="p-4 text-left font-label text-[10px] uppercase tracking-widest text-outline">
+                      Comanda
+                    </th>
+                    <th className="p-4 text-left font-label text-[10px] uppercase tracking-widest text-outline">
+                      Client
+                    </th>
+                    <th className="p-4 text-left font-label text-[10px] uppercase tracking-widest text-outline">
+                      Data
+                    </th>
+                    <th className="p-4 text-left font-label text-[10px] uppercase tracking-widest text-outline">
+                      Plata
+                    </th>
+                    <th className="p-4 text-left font-label text-[10px] uppercase tracking-widest text-outline">
+                      Status
+                    </th>
+                    <th className="p-4 text-right font-label text-[10px] uppercase tracking-widest text-outline">
+                      Total
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {orders.map((order) => (
                     <tr
                       key={order.id}
-                      className="border-b border-outline-variant/10 hover:bg-surface-container/50 transition-colors"
+                      className="border-b border-outline-variant/10 transition-colors hover:bg-surface-container/50"
                     >
                       <td className="p-4">
                         <span className="font-label text-sm font-bold">
                           #{order.id.slice(0, 8)}
                         </span>
-                        <span className="block font-label text-[10px] text-outline mt-1">
-                          {order.items?.length || 0} articol{(order.items?.length || 0) !== 1 ? "e" : ""}
+                        <span className="mt-1 block font-label text-[10px] text-outline">
+                          {order.items?.length || 0} articol
+                          {(order.items?.length || 0) !== 1 ? "e" : ""}
                         </span>
                       </td>
                       <td className="p-4">
-                        <span className="font-label text-xs">{order.full_name || "—"}</span>
-                        <span className="block font-label text-[10px] text-outline mt-1">
+                        <span className="font-label text-xs">
+                          {order.full_name || "—"}
+                        </span>
+                        <span className="mt-1 block font-label text-[10px] text-outline">
                           {order.email}
                         </span>
                       </td>
@@ -146,24 +165,24 @@ export default function AdminOrdersPage() {
                       <td className="p-4 font-label text-[10px] uppercase tracking-widest text-outline">
                         {order.payment_method === "cash_on_delivery"
                           ? "Ramburs"
-                          : "Card"}
+                          : "Online"}
                       </td>
                       <td className="p-4">
                         <select
                           value={order.fulfillment_status}
                           onChange={(e) => updateStatus(order.id, e.target.value)}
-                          className={`font-label text-[10px] uppercase tracking-widest px-3 py-1 bg-transparent border-0 cursor-pointer ${
+                          className={`cursor-pointer border-0 bg-transparent px-3 py-1 font-label text-[10px] uppercase tracking-widest ${
                             order.fulfillment_status === "fulfilled"
                               ? "bg-primary/10 text-primary"
                               : "bg-surface-container text-outline"
                           }`}
                         >
                           <option value="unfulfilled">Procesare</option>
-                          <option value="shipped">În Tranzit</option>
+                          <option value="shipped">In tranzit</option>
                           <option value="fulfilled">Livrat</option>
                         </select>
                       </td>
-                      <td className="p-4 font-label text-sm text-primary font-bold text-right">
+                      <td className="p-4 text-right font-label text-sm font-bold text-primary">
                         {formatPriceDetailed(order.total_cents)}
                       </td>
                     </tr>

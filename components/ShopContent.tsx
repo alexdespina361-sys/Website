@@ -14,81 +14,95 @@ interface DisplayProduct {
   image: string;
   badge?: string;
   category?: string;
+  categoryGroup?: string;
+  categoryLabel?: string;
   season?: string;
 }
 
-export default function ShopContent({ products }: { products: DisplayProduct[] }) {
+export default function ShopContent({
+  products
+}: {
+  products: DisplayProduct[];
+}) {
   const [search, setSearch] = useState("");
+  const [selectedCategoryGroup, setSelectedCategoryGroup] = useState<
+    string | null
+  >(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedMaterials, setSelectedMaterials] = useState<string[]>([]);
   const [selectedSeason, setSelectedSeason] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"relevance" | "newest">("relevance");
 
-  const categories = Array.from(
-    new Set(products.map((product) => product.category).filter(Boolean))
+  const categoryGroups = Array.from(
+    new Set(products.map((product) => product.categoryGroup).filter(Boolean))
   ) as string[];
 
-  const materials = Array.from(
+  const categories = Array.from(
     new Set(
       products
-        .flatMap((product) => product.material.split(","))
-        .map((material) => material.trim())
+        .filter(
+          (product) =>
+            !selectedCategoryGroup ||
+            product.categoryGroup === selectedCategoryGroup
+        )
+        .map((product) => product.category)
         .filter(Boolean)
     )
-  );
+  ) as string[];
 
   const seasons = Array.from(
     new Set(products.map((product) => product.season).filter(Boolean))
   ) as string[];
 
-  const toggleMaterial = (mat: string) => {
-    setSelectedMaterials((prev) =>
-      prev.includes(mat) ? prev.filter((m) => m !== mat) : [...prev, mat]
-    );
-  };
-
   const resetFilters = () => {
     setSearch("");
+    setSelectedCategoryGroup(null);
     setSelectedCategory(null);
-    setSelectedMaterials([]);
     setSelectedSeason(null);
     setSortBy("relevance");
   };
 
-  // Filter products
-  let filtered = products.filter((p) => {
+  let filtered = products.filter((product) => {
     const query = search.trim().toLowerCase();
 
     if (
       query &&
-      !p.name.toLowerCase().includes(query) &&
-      !(p.material || "").toLowerCase().includes(query)
+      !product.name.toLowerCase().includes(query) &&
+      !(product.categoryLabel || "").toLowerCase().includes(query)
     ) {
       return false;
     }
-    if (selectedCategory && p.category !== selectedCategory) return false;
-    if (selectedMaterials.length > 0 && !selectedMaterials.some((m) => (p.material || "").toLowerCase().includes(m.toLowerCase()))) {
+
+    if (
+      selectedCategoryGroup &&
+      product.categoryGroup !== selectedCategoryGroup
+    ) {
       return false;
     }
-    if (selectedSeason && p.season !== selectedSeason) return false;
+
+    if (selectedCategory && product.category !== selectedCategory) {
+      return false;
+    }
+
+    if (selectedSeason && product.season !== selectedSeason) {
+      return false;
+    }
+
     return true;
   });
 
-  // Sort
   if (sortBy === "newest") {
     filtered = [...filtered].reverse();
   }
 
   const hasActiveFilters =
     Boolean(search.trim()) ||
+    Boolean(selectedCategoryGroup) ||
     Boolean(selectedCategory) ||
-    selectedMaterials.length > 0 ||
     Boolean(selectedSeason) ||
     sortBy !== "relevance";
 
   return (
     <main className="pt-20">
-      {/* Search Header */}
       <section className="pt-32 pb-12 px-12 bg-surface">
         <div className="max-w-[1920px] mx-auto border-b border-outline-variant/40 pb-4">
           <div className="flex items-center gap-4 group">
@@ -101,13 +115,17 @@ export default function ShopContent({ products }: { products: DisplayProduct[] }
               placeholder="EXPLOREAZĂ ARHIVELE..."
               type="text"
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(event) => setSearch(event.target.value)}
             />
           </div>
           <div className="flex justify-between items-center mt-6">
             <span className="font-label text-[10px] uppercase tracking-[0.2em] text-outline">
               Se afișează {filtered.length} de rezultate
-              {selectedCategory ? ` în ${selectedCategory}` : ""}
+              {selectedCategory
+                ? ` în ${selectedCategory}`
+                : selectedCategoryGroup
+                  ? ` în ${selectedCategoryGroup}`
+                  : ""}
             </span>
             <div className="flex items-center gap-4">
               <span className="font-label text-[10px] uppercase tracking-[0.2em] text-outline">
@@ -138,27 +156,30 @@ export default function ShopContent({ products }: { products: DisplayProduct[] }
         </div>
       </section>
 
-      {/* Main Content */}
       <section className="flex flex-col md:flex-row px-12 max-w-[1920px] mx-auto gap-12 pb-24">
-        {/* Sidebar Filters */}
         <aside className="md:w-1/5 shrink-0">
           <div className="sticky top-32 space-y-12">
             <div>
               <h3 className="font-label text-[11px] font-bold uppercase tracking-widest mb-6">
-                Categorie
+                Departament
               </h3>
               <ul className="space-y-4 font-label text-[12px] uppercase tracking-widest">
-                {categories.map((cat) => (
-                  <li key={cat}>
+                {categoryGroups.map((group) => (
+                  <li key={group}>
                     <button
-                      onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
+                      onClick={() => {
+                        const nextGroup =
+                          selectedCategoryGroup === group ? null : group;
+                        setSelectedCategoryGroup(nextGroup);
+                        setSelectedCategory(null);
+                      }}
                       className={`block pl-4 transition-all duration-300 hover:pl-6 text-left ${
-                        selectedCategory === cat
+                        selectedCategoryGroup === group
                           ? "text-primary border-l-2 border-primary"
                           : "text-outline hover:text-primary"
                       }`}
                     >
-                      {cat}
+                      {group}
                     </button>
                   </li>
                 ))}
@@ -166,26 +187,28 @@ export default function ShopContent({ products }: { products: DisplayProduct[] }
             </div>
             <div>
               <h3 className="font-label text-[11px] font-bold uppercase tracking-widest mb-6">
-                Material
+                Subcategorie
               </h3>
-              <div className="space-y-3">
-                {materials.map((mat) => (
-                  <label
-                    key={mat}
-                    className="flex items-center gap-3 cursor-pointer group"
-                  >
-                    <input
-                      className="w-4 h-4 border-outline-variant/40 rounded-none text-primary focus:ring-primary transition-colors cursor-pointer"
-                      type="checkbox"
-                      checked={selectedMaterials.includes(mat)}
-                      onChange={() => toggleMaterial(mat)}
-                    />
-                    <span className="font-label text-[11px] uppercase tracking-widest text-outline group-hover:text-primary transition-colors">
-                      {mat}
-                    </span>
-                  </label>
+              <ul className="space-y-4 font-label text-[12px] uppercase tracking-widest">
+                {categories.map((category) => (
+                  <li key={category}>
+                    <button
+                      onClick={() =>
+                        setSelectedCategory(
+                          selectedCategory === category ? null : category
+                        )
+                      }
+                      className={`block pl-4 transition-all duration-300 hover:pl-6 text-left ${
+                        selectedCategory === category
+                          ? "text-primary border-l-2 border-primary"
+                          : "text-outline hover:text-primary"
+                      }`}
+                    >
+                      {category}
+                    </button>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
             <div>
               <h3 className="font-label text-[11px] font-bold uppercase tracking-widest mb-6">
@@ -195,9 +218,15 @@ export default function ShopContent({ products }: { products: DisplayProduct[] }
                 {seasons.map((season) => (
                   <li key={season}>
                     <button
-                      onClick={() => setSelectedSeason(selectedSeason === season ? null : season)}
+                      onClick={() =>
+                        setSelectedSeason(
+                          selectedSeason === season ? null : season
+                        )
+                      }
                       className={`text-left transition-all duration-300 ${
-                        selectedSeason === season ? "text-primary" : "hover:text-primary hover:tracking-[0.25em]"
+                        selectedSeason === season
+                          ? "text-primary"
+                          : "hover:text-primary hover:tracking-[0.25em]"
                       }`}
                     >
                       {season}
@@ -217,7 +246,6 @@ export default function ShopContent({ products }: { products: DisplayProduct[] }
           </div>
         </aside>
 
-        {/* Product Grid */}
         <div className="flex-1">
           {filtered.length === 0 ? (
             <div className="text-center py-24">
@@ -231,14 +259,14 @@ export default function ShopContent({ products }: { products: DisplayProduct[] }
                   ? "Adaugă produse din panoul admin."
                   : "Încearcă filtre diferite."}
               </p>
-              {products.length > 0 && (
+              {products.length > 0 ? (
                 <button
                   onClick={resetFilters}
                   className="mt-6 font-label text-[10px] uppercase tracking-widest text-primary hover:underline"
                 >
                   Resetează filtrele
                 </button>
-              )}
+              ) : null}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -249,11 +277,11 @@ export default function ShopContent({ products }: { products: DisplayProduct[] }
                   className="group cursor-pointer"
                 >
                   <div className="bg-surface-container-low overflow-hidden mb-4 relative">
-                    {product.badge && (
+                    {product.badge ? (
                       <span className="absolute top-4 left-4 bg-primary text-white px-3 py-1 font-label text-[9px] uppercase tracking-[0.2em] z-20">
                         {product.badge}
                       </span>
-                    )}
+                    ) : null}
                     {product.image ? (
                       <Image
                         alt={product.name}
@@ -274,6 +302,11 @@ export default function ShopContent({ products }: { products: DisplayProduct[] }
                   </div>
                   <div className="flex justify-between items-start">
                     <div className="transform group-hover:translate-x-1 transition-transform duration-300">
+                      {product.categoryLabel ? (
+                        <p className="font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-2">
+                          {product.categoryLabel}
+                        </p>
+                      ) : null}
                       <h4 className="font-headline text-lg italic leading-tight group-hover:text-primary transition-colors">
                         {product.name}
                       </h4>

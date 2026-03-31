@@ -1,30 +1,31 @@
 import EditorialPage from "@/components/EditorialPage";
+import { SITE_WORDMARK } from "@/lib/site";
 
 export default function TermsPage() {
   return (
     <EditorialPage
       eyebrow="Legal"
-      title="Termeni și Condiții"
-      intro="Acești termeni descriu modul în care poți utiliza magazinul RED STUDIO, cum plasăm comenzile și ce responsabilități există de ambele părți."
+      title="Termeni si conditii"
+      intro={`Acesti termeni descriu modul in care poti utiliza magazinul ${SITE_WORDMARK}, cum plasam comenzile si ce responsabilitati exista de ambele parti.`}
       sections={[
         {
           title: "Comenzi",
           body: [
-            "Prin plasarea unei comenzi confirmi că informațiile furnizate sunt corecte și complete. RED STUDIO poate contacta clientul pentru clarificări înainte de expediere.",
-            "Disponibilitatea produselor depinde de stocul variantelor. În situația unei erori de inventar, vei fi notificat și plata va fi rambursată conform procesatorului de plăți.",
+            `Prin plasarea unei comenzi confirmi ca informatiile furnizate sunt corecte si complete. ${SITE_WORDMARK} poate contacta clientul pentru clarificari inainte de expediere.`,
+            "Disponibilitatea produselor depinde de stocul variantelor. In situatia unei erori de inventar, vei fi notificat inainte de expediere pentru confirmare sau anulare.",
           ],
         },
         {
-          title: "Prețuri și Plăți",
+          title: "Preturi si plati",
           body: [
-            "Toate prețurile sunt afișate în RON și includ taxele aplicabile, dacă nu este menționat altfel. Plata este procesată prin Stripe Checkout.",
-            "Promoțiile, prețurile comparative și disponibilitatea pot fi actualizate fără notificare prealabilă, însă comenzile confirmate păstrează totalul afișat la checkout.",
+            "Toate preturile sunt afisate in RON si includ taxele aplicabile, daca nu este mentionat altfel. Plata se face exclusiv ramburs, la livrare.",
+            "Promotiile, preturile comparative si disponibilitatea pot fi actualizate fara notificare prealabila, insa comenzile confirmate pastreaza totalul comunicat in momentul confirmarii.",
           ],
         },
         {
-          title: "Limitarea Răspunderii",
+          title: "Limitarea raspunderii",
           body: [
-            "RED STUDIO nu răspunde pentru întârzieri cauzate de transportatori, întreruperi ale furnizorilor terți sau evenimente independente de controlul nostru direct.",
+            `${SITE_WORDMARK} nu raspunde pentru intarzieri cauzate de transportatori, intreruperi ale furnizorilor terti sau evenimente independente de controlul nostru direct.`,
           ],
         },
       ]}

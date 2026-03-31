@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_WORDMARK } from "@/lib/site";
 
 interface EditorialSection {
   title: string;
@@ -37,7 +38,7 @@ export default function EditorialPage({
           <div className="grid gap-16 md:grid-cols-[220px_minmax(0,1fr)]">
             <div>
               <p className="font-label text-[10px] uppercase tracking-[0.3em] text-outline">
-                RED STUDIO
+                {SITE_WORDMARK}
               </p>
             </div>
             <div className="space-y-16">

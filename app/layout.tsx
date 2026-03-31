@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
+import { SITE_DESCRIPTION, SITE_WORDMARK } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "RED STUDIO — Curatorial de Obiecte și Experiențe",
-  description:
-    "O curatorie de obiecte și experiențe pentru minimalistul modern.",
+  title: `${SITE_WORDMARK} - Curatorial de Obiecte si Experiente`,
+  description: SITE_DESCRIPTION,
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ro">
-      <body className="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+      <body className="overflow-x-hidden bg-background font-body text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -1,27 +1,27 @@
-# RED STUDIO — E-Commerce Website
+# Red Atelier - E-Commerce Website
 
-A high-end fashion e-commerce website built with Next.js, TypeScript, Supabase, and Stripe Checkout.
+Red Atelier is a fashion e-commerce site built with Next.js, TypeScript, Supabase, and Resend.
 
 ## Tech Stack
 
-- **Framework:** Next.js 14 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS v3
-- **Database & Auth:** Supabase
-- **Payments:** Stripe Checkout
-- **Email:** Resend (for transactional emails)
-- **Deployment:** Netlify
+- Framework: Next.js 14 (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS v3
+- Database and Auth: Supabase
+- Payments: Cash on delivery only
+- Email: Resend
+- Deployment: Netlify
 
 ## Prerequisites
 
-- Node.js 18+ (recommended: 20+)
+- Node.js 20+
 - npm
 - Supabase account
-- Stripe account
+- Resend account with a verified `redatelier.store` domain
 
 ## Environment Variables
 
-Create a `.env.local` file in the root directory with the following variables:
+Create a `.env.local` file in the project root:
 
 ```env
 # Supabase
@@ -30,15 +30,10 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
 SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
 ADMIN_EMAILS=admin@example.com
 
-# Stripe
-STRIPE_SECRET_KEY=your-stripe-secret-key
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your-stripe-publishable-key
-STRIPE_WEBHOOK_SECRET=your-stripe-webhook-secret
-
 # Resend
 RESEND_API_KEY=your-resend-api-key
-RESEND_FROM_EMAIL=RED STUDIO <onboarding@resend.dev>
-CONTACT_EMAIL_TO=hello@redstudio.ro
+RESEND_FROM_EMAIL=Red Atelier <contact@redatelier.store>
+CONTACT_EMAIL_TO=contact@redatelier.store
 
 # App
 NEXT_PUBLIC_APP_URL=http://localhost:3000
@@ -46,141 +41,72 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 ## Setup
 
-1. **Install dependencies:**
+1. Install dependencies:
+
    ```bash
    npm install
    ```
 
-2. **Set up Supabase:**
+2. Set up Supabase:
    - Create a new Supabase project
    - Run the SQL migrations in `supabase/migrations/` in order:
      - `001_initial_schema.sql`
      - `002_harden_auth_and_rls.sql`
      - `003_shipping_addresses_and_payment_methods.sql`
-   - Copy your project URL, anon key, and service role key to `.env.local`
+     - `004_structured_product_taxonomy.sql`
+     - `005_remove_legacy_seed_products.sql`
+     - `006_rename_imported_products.sql`
+     - `007_refresh_imported_product_descriptions.sql`
+     - `008_purge_legacy_seed_records.sql`
+     - `009_increase_variant_prices_by_sixty_percent.sql`
+     - `010_apply_category_minimums_then_raise_twenty_percent.sql`
+   - Add your project URL, anon key, and service role key to `.env.local`
    - Grant admin access through either `ADMIN_EMAILS` or `profiles.role = 'admin'`
 
-3. **Set up Stripe:**
-   - Create a Stripe account
-   - Get your API keys from the Stripe Dashboard
-   - Set up a webhook endpoint pointing to `/api/webhooks/stripe`
-   - Copy the webhook signing secret to `.env.local`
+3. Verify your `redatelier.store` sending domain inside Resend and set:
+   - `RESEND_FROM_EMAIL=Red Atelier <contact@redatelier.store>`
+   - `CONTACT_EMAIL_TO=contact@redatelier.store`
 
-4. **Run the development server:**
+4. Run the development server:
+
    ```bash
    npm run dev
    ```
 
-5. **Open [http://localhost:3000](http://localhost:3000)**
+5. Open [http://localhost:3000](http://localhost:3000)
 
 ## Available Scripts
 
-- `npm run dev` — Start development server
-- `npm run build` — Build for production
-- `npm start` — Start production server
-- `npm run lint` — Run ESLint
-- `npm run typecheck` — Run TypeScript type checking
+- `npm run dev` - start the development server
+- `npm run build` - build for production
+- `npm start` - start the production server
+- `npm run lint` - run ESLint
+- `npm run typecheck` - run TypeScript checks
+- `npm run import:products -- --dry-run` - preview the product import
+- `npm run import:products -- --commit --publish --default-stock 5` - import and publish products
 
-## Project Structure
+## Product Import
 
-```
-app/
-  page.tsx              # Home page
-  shop/
-    page.tsx            # Shop/collections page
-    [slug]/page.tsx     # Product detail page
-  cart/page.tsx         # Cart page
-  checkout/
-    success/page.tsx    # Post-payment success page
-  login/page.tsx        # Login page
-  signup/page.tsx       # Signup page
-  account/
-    page.tsx            # Account settings
-    orders/page.tsx     # Order history
-  privacy/page.tsx      # Privacy policy
-  shipping/page.tsx     # Shipping and returns
-  terms/page.tsx        # Terms and conditions
-  contact/page.tsx      # Contact page
-  about/page.tsx        # About page
-  admin/
-    page.tsx            # Admin dashboard
-    products/page.tsx   # Product management
-    orders/page.tsx     # Order management
-  api/
-    checkout/route.ts   # Stripe checkout API
-    webhooks/stripe/route.ts  # Stripe webhook handler
-components/
-  Header.tsx            # Shared header
-  Footer.tsx            # Shared footer
-  Providers.tsx         # Context providers
-  CheckoutButton.tsx    # Checkout panel (card + COD + address selection)
-  AddressBook.tsx       # Saved shipping address management
-lib/
-  supabase.ts           # Supabase client
-  auth.ts               # Auth utilities
-  shipping-addresses.ts # Address helpers
-  products.ts           # Product data access
-  format.ts             # Price formatting
-  types.ts              # TypeScript types
-  CartContext.tsx        # Cart state management
-supabase/
-  migrations/
-    001_initial_schema.sql  # Database schema
-```
+The importer reads [`produse noi/products.json`](/Users/Alex/Desktop/Website/produse%20noi/products.json) and:
 
-## Routes
+- maps products into the grouped taxonomy
+- preserves multi-image galleries
+- applies friendly Red Atelier product names from [`lib/product-name-overrides.json`](/Users/Alex/Desktop/Website/lib/product-name-overrides.json)
+- updates existing imported products by slug
 
-| Route | Description |
-|---|---|
-| `/` | Home page |
-| `/shop` | Product catalog |
-| `/shop/[slug]` | Product detail |
-| `/cart` | Shopping cart |
-| `/checkout/success` | Post-payment confirmation |
-| `/login` | User login |
-| `/signup` | User registration |
-| `/account` | Account settings (protected) |
-| `/account/orders` | Order history (protected) |
-| `/terms` | Terms and conditions |
-| `/privacy` | Privacy policy |
-| `/shipping` | Shipping and returns |
-| `/contact` | Contact form |
-| `/about` | About page |
-| `/admin` | Admin dashboard |
-| `/admin/products` | Product management |
-| `/admin/orders` | Order management |
+## Email Flows
 
-## Database Schema
+- Homepage newsletter form posts to `/api/newsletter`
+- Contact form posts to `/api/contact`
+- Order confirmations use `lib/email.ts`
 
-The database includes the following tables:
-- `profiles` — User profiles (extends Supabase auth)
-- `products` — Product catalog
-- `product_variants` — Size/color variants with pricing and stock
-- `product_images` — Product images
-- `shipping_addresses` — Structured saved delivery addresses
-- `carts` — Shopping carts
-- `cart_items` — Items in carts
-- `orders` — Completed orders
-- `order_items` — Items in orders
+Important:
 
-## Design System
-
-The design follows a minimal editorial aesthetic:
-- **Colors:** Monochrome base with terracotta accent (#974730)
-- **Typography:** Noto Serif (headlines) + Inter (body/labels)
-- **Layout:** Asymmetric, generous spacing, 0px border radius
-- **Motion:** Scroll reveal, marquee, parallax effects
-
-## Deployment
-
-The app is configured for Netlify deployment. See `netlify.toml` for configuration.
+- If Resend is still using `onboarding@resend.dev`, delivery to `contact@redatelier.store` will fail
+- You must verify the `redatelier.store` domain in Resend before production testing
 
 ## Notes
 
-- Admin APIs and Stripe webhooks should use `SUPABASE_SERVICE_ROLE_KEY` in production.
-- Builds are intended to run on Node.js 20+.
-- Checkout supports both Stripe card payments and cash on delivery.
-- Logged-in customers can save multiple delivery addresses and reuse the default one automatically during checkout.
-- `npm run build` currently passes with editorial `<img>` warnings; those layouts were kept to preserve the original Stitch composition.
-# Website
-# Website
+- The six original seed products and their linked test orders were removed from Supabase
+- Checkout is cash on delivery only; Stripe card checkout is disabled in the app
+- Pricing currently reflects the imported catalog uplift, category minimums, and a final 20% increase

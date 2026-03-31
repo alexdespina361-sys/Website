@@ -11,8 +11,10 @@ type IconName =
   | "inventory"
   | "login"
   | "mail-check"
+  | "message"
   | "minus"
   | "person"
+  | "phone"
   | "receipt"
   | "refresh"
   | "search"
@@ -92,11 +94,21 @@ const iconPaths: Record<IconName, JSX.Element> = {
       <path d="m9 15 2 2 4-4" />
     </>
   ),
+  message: (
+    <>
+      <path d="M5 8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-4l-4 3v-3H8a3 3 0 0 1-3-3Z" />
+    </>
+  ),
   minus: <path d="M5 12h14" />,
   person: (
     <>
       <circle cx="12" cy="8" r="3.5" />
       <path d="M5 19c1.8-3.3 4.1-5 7-5s5.2 1.7 7 5" />
+    </>
+  ),
+  phone: (
+    <>
+      <path d="M6.5 5h3l1.2 3.4-1.8 1.7a13.8 13.8 0 0 0 5 5l1.7-1.8L19 14.5v2.8A1.7 1.7 0 0 1 17.3 19C10.5 19 5 13.5 5 6.7A1.7 1.7 0 0 1 6.7 5Z" />
     </>
   ),
   receipt: (

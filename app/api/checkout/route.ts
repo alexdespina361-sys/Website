@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import Stripe from "stripe";
 import {
   createSupabaseAdminClient,
   createSupabaseServerClient,
@@ -17,14 +16,10 @@ import {
 import { sendOrderConfirmation } from "@/lib/email";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
 interface CheckoutItemInput {
   variantId: string;
   quantity: number;
 }
-
-type CheckoutPaymentMethod = "card" | "cash_on_delivery";
 
 async function resolveShippingAddress(params: {
   supabase: SupabaseClient;
@@ -82,17 +77,17 @@ async function resolveShippingAddress(params: {
       }
     }
 
-    throw new Error("Adresa selectată nu mai este disponibilă.");
+    throw new Error("Adresa selectata nu mai este disponibila.");
   }
 
   if (!shippingAddress) {
-    throw new Error("Alege sau completează o adresă de livrare.");
+    throw new Error("Alege sau completeaza o adresa de livrare.");
   }
 
   const normalizedAddress = normalizeShippingAddressDraft(shippingAddress);
 
   if (!isShippingAddressComplete(normalizedAddress)) {
-    throw new Error("Completează numele destinatarului, adresa, orașul și țara.");
+    throw new Error("Completeaza numele destinatarului, adresa, orasul si tara.");
   }
 
   if (userId && saveAddress) {
@@ -122,7 +117,7 @@ async function resolveShippingAddress(params: {
       .single();
 
     if (error || !insertedAddress) {
-      throw new Error(error?.message || "Nu am putut salva adresa în cont.");
+      throw new Error(error?.message || "Nu am putut salva adresa in cont.");
     }
 
     return {
@@ -141,16 +136,15 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const items = Array.isArray(body.items) ? (body.items as CheckoutItemInput[]) : [];
-    const paymentMethod = (body.paymentMethod ||
-      "card") as CheckoutPaymentMethod;
+    const paymentMethod = String(body.paymentMethod || "cash_on_delivery");
 
     if (items.length === 0) {
-      return NextResponse.json({ error: "Coșul este gol." }, { status: 400 });
+      return NextResponse.json({ error: "Cosul este gol." }, { status: 400 });
     }
 
-    if (!["card", "cash_on_delivery"].includes(paymentMethod)) {
+    if (paymentMethod !== "cash_on_delivery") {
       return NextResponse.json(
-        { error: "Metodă de plată invalidă." },
+        { error: "Plata cu cardul este dezactivata. Se accepta doar ramburs." },
         { status: 400 }
       );
     }
@@ -196,91 +190,46 @@ export async function POST(request: Request) {
       });
     }
 
-    if (paymentMethod === "cash_on_delivery") {
-      const order = await createOrderWithItems(
-        adminSupabase,
-        {
-          userId: user?.id || null,
-          shippingAddressId,
-          paymentMethod: "cash_on_delivery",
-          status: "pending",
-          email: contactEmail,
-          fullName: address.recipient_name,
-          phone: address.phone || null,
-          address: deliveryAddress,
-          totalCents,
-        },
-        resolvedItems
-      );
-
-      await sendOrderConfirmation({
-        orderId: order.id,
-        email: order.email,
-        fullName: order.full_name,
-        totalCents: order.total_cents,
-        items: resolvedItems.map((item) => ({
-          name: item.name,
-          size: item.size,
-          color: item.color,
-          quantity: item.quantity,
-          priceCents: item.priceCents,
-        })),
-      });
-
-      return NextResponse.json({
-        redirectUrl: `/checkout/success?method=cash_on_delivery&order_id=${order.id}`,
-      });
-    }
-
-    const session = await stripe.checkout.sessions.create({
-      customer_email: contactEmail,
-      billing_address_collection: "auto",
-      line_items: resolvedItems.map((item) => ({
-        price_data: {
-          currency: "ron",
-          product_data: {
-            name: item.name,
-            description: [item.size, item.color].filter(Boolean).join(", "),
-          },
-          unit_amount: item.priceCents,
-        },
-        quantity: item.quantity,
-      })),
-      mode: "payment",
-      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/cart`,
-      client_reference_id: user?.id,
-      metadata: {
-        cart_items: JSON.stringify(
-          resolvedItems.map((item) => ({
-            variant_id: item.variantId,
-            product_id: item.productId,
-            name: item.name,
-            slug: item.slug,
-            size: item.size,
-            color: item.color,
-            quantity: item.quantity,
-            price_cents: item.priceCents,
-          }))
-        ),
-        user_id: user?.id || "",
-        payment_method: "card",
-        shipping_address_id: shippingAddressId || "",
-        delivery_name: address.recipient_name,
-        delivery_phone: address.phone || "",
-        delivery_address: deliveryAddress,
-        contact_email: contactEmail,
+    const order = await createOrderWithItems(
+      adminSupabase,
+      {
+        userId: user?.id || null,
+        shippingAddressId,
+        paymentMethod: "cash_on_delivery",
+        status: "pending",
+        email: contactEmail,
+        fullName: address.recipient_name,
+        phone: address.phone || null,
+        address: deliveryAddress,
+        totalCents,
       },
+      resolvedItems
+    );
+
+    await sendOrderConfirmation({
+      orderId: order.id,
+      email: order.email,
+      fullName: order.full_name,
+      totalCents: order.total_cents,
+      items: resolvedItems.map((item) => ({
+        name: item.name,
+        size: item.size,
+        color: item.color,
+        quantity: item.quantity,
+        priceCents: item.priceCents,
+      })),
     });
 
-    return NextResponse.json({ sessionId: session.id, url: session.url });
+    return NextResponse.json({
+      redirectUrl: `/checkout/success?method=cash_on_delivery&order_id=${order.id}`,
+    });
   } catch (error) {
     console.error("Checkout error:", error);
 
     const errorMessage =
       error instanceof Error
         ? error.message
-        : "Nu am putut crea checkout-ul.";
+        : "Nu am putut confirma comanda.";
     const isSupabasePrivilegedConfigError = errorMessage.includes(
       "SUPABASE_SERVICE_ROLE_KEY"
     );
@@ -288,7 +237,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error: isSupabasePrivilegedConfigError
-          ? "Checkout-ul nu este configurat complet pe server. Lipsește cheia de serviciu Supabase necesară pentru rezervarea stocului și crearea comenzilor."
+          ? "Checkout-ul nu este configurat complet pe server. Lipseste cheia de serviciu Supabase necesara pentru rezervarea stocului si crearea comenzilor."
           : errorMessage,
       },
       { status: isSupabasePrivilegedConfigError ? 503 : 500 }

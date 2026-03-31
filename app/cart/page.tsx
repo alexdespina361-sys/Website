@@ -15,9 +15,9 @@ export default function CartPage() {
   return (
     <div>
       <Header />
-      <main className="pt-20 min-h-screen">
-        <section className="px-12 md:px-24 py-32">
-          <h1 className="font-headline text-5xl mb-12">Coșul Tău</h1>
+      <main className="min-h-screen pt-20">
+        <section className="px-12 py-32 md:px-24">
+          <h1 className="mb-12 font-headline text-5xl">Cosul tau</h1>
 
           {items.length === 0 ? (
             <div className="bg-surface-container-lowest p-12 text-center">
@@ -26,22 +26,22 @@ export default function CartPage() {
                 className="mx-auto mb-6 h-14 w-14 text-outline-variant"
               />
               <p className="font-label text-sm uppercase tracking-widest text-secondary">
-                Coșul tău este gol.
+                Cosul tau este gol.
               </p>
               <Link
                 href="/shop"
-                className="inline-block mt-8 bg-primary text-white px-12 py-5 font-label text-xs uppercase tracking-widest hover:bg-primary-container transition-all duration-500"
+                className="mt-8 inline-block bg-primary px-12 py-5 font-label text-xs uppercase tracking-widest text-white transition-all duration-500 hover:bg-primary-container"
               >
-                Explorează Colecția
+                Exploreaza colectia
               </Link>
             </div>
           ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-              <div className="lg:col-span-2 space-y-8">
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
+              <div className="space-y-8 lg:col-span-2">
                 {items.map((item) => (
                   <div
                     key={item.id}
-                    className="bg-surface-container-lowest p-6 flex gap-6"
+                    className="flex gap-6 bg-surface-container-lowest p-6"
                   >
                     <div className="relative h-32 w-24 shrink-0 overflow-hidden bg-surface-container">
                       {item.image ? (
@@ -56,39 +56,39 @@ export default function CartPage() {
                       ) : (
                         <div className="flex h-full items-center justify-center px-3 text-center">
                           <span className="font-label text-[9px] uppercase tracking-[0.2em] text-outline">
-                            Fără imagine
+                            Fara imagine
                           </span>
                         </div>
                       )}
                     </div>
                     <div className="flex-1">
-                      <div className="flex justify-between items-start">
+                      <div className="flex items-start justify-between">
                         <div>
                           <h3 className="font-headline text-lg italic">
                             {item.name}
                           </h3>
-                          <p className="font-label text-[10px] uppercase tracking-widest text-outline mt-1">
+                          <p className="mt-1 font-label text-[10px] uppercase tracking-widest text-outline">
                             {[item.size, item.color].filter(Boolean).join(", ")}
                           </p>
                         </div>
                         <button
                           onClick={() => removeItem(item.id)}
-                          className="text-outline hover:text-error transition-colors"
+                          className="text-outline transition-colors hover:text-error"
                         >
                           <Icon name="close" className="h-5 w-5" />
                         </button>
                       </div>
-                      <div className="flex justify-between items-end mt-6">
+                      <div className="mt-6 flex items-end justify-between">
                         <div className="flex items-center gap-3">
                           <button
                             onClick={() =>
                               updateQuantity(item.id, item.quantity - 1)
                             }
-                            className="w-8 h-8 bg-surface-container flex items-center justify-center hover:bg-surface-container-highest transition-colors"
+                            className="flex h-8 w-8 items-center justify-center bg-surface-container transition-colors hover:bg-surface-container-highest"
                           >
                             <Icon name="minus" className="h-3 w-3" />
                           </button>
-                          <span className="font-label text-sm w-6 text-center">
+                          <span className="w-6 text-center font-label text-sm">
                             {item.quantity}
                           </span>
                           <button
@@ -98,12 +98,12 @@ export default function CartPage() {
                                 Math.min(item.quantity + 1, item.availableStock)
                               )
                             }
-                            className="w-8 h-8 bg-surface-container flex items-center justify-center hover:bg-surface-container-highest transition-colors"
+                            className="flex h-8 w-8 items-center justify-center bg-surface-container transition-colors hover:bg-surface-container-highest"
                           >
                             <Icon name="add" className="h-3 w-3" />
                           </button>
                         </div>
-                        <span className="font-label text-sm text-primary font-bold">
+                        <span className="font-label text-sm font-bold text-primary">
                           {formatPrice(item.priceCents * item.quantity)}
                         </span>
                       </div>
@@ -113,11 +113,11 @@ export default function CartPage() {
               </div>
 
               <div>
-                <div className="bg-surface-container-lowest p-8 sticky top-32">
-                  <h3 className="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-6">
-                    Sumar Comandă
+                <div className="sticky top-32 bg-surface-container-lowest p-8">
+                  <h3 className="mb-6 font-label text-[10px] uppercase tracking-[0.2em] text-outline">
+                    Sumar comanda
                   </h3>
-                  <div className="flex justify-between items-center mb-4">
+                  <div className="mb-4 flex items-center justify-between">
                     <span className="font-label text-sm uppercase tracking-widest">
                       Subtotal
                     </span>
@@ -125,16 +125,16 @@ export default function CartPage() {
                       {formatPrice(totalCents)}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center mb-8 pb-8 border-b border-outline-variant/20">
+                  <div className="mb-8 flex items-center justify-between border-b border-outline-variant/20 pb-8">
                     <span className="font-label text-sm uppercase tracking-widest">
                       Livrare
                     </span>
                     <span className="font-label text-sm text-outline">
-                      Calculat la checkout
+                      Confirmata la procesarea comenzii
                     </span>
                   </div>
-                  <div className="flex justify-between items-center mb-8">
-                    <span className="font-label text-sm uppercase tracking-widest font-bold">
+                  <div className="mb-8 flex items-center justify-between">
+                    <span className="font-label text-sm font-bold uppercase tracking-widest">
                       Total
                     </span>
                     <span className="font-headline text-2xl">

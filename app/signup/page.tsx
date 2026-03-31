@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { signUp } from "@/lib/auth";
 import { useToast } from "@/components/ToastProvider";
+import { SITE_WORDMARK } from "@/lib/site";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -28,15 +29,15 @@ export default function SignupPage() {
       if (data.session) {
         showToast({
           title: "Cont creat",
-          description: "Bine ai venit în RED STUDIO.",
+          description: `Bine ai venit in ${SITE_WORDMARK}.`,
           tone: "success",
         });
         router.push("/account");
       } else {
         showToast({
-          title: "Verifică emailul",
+          title: "Verifica emailul",
           description:
-            "Contul a fost creat. Confirmă adresa de email pentru a continua.",
+            "Contul a fost creat. Confirma adresa de email pentru a continua.",
           tone: "info",
         });
         router.push("/login");
@@ -44,7 +45,7 @@ export default function SignupPage() {
 
       router.refresh();
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : "Eroare la înregistrare");
+      setError(err instanceof Error ? err.message : "Eroare la inregistrare");
     } finally {
       setLoading(false);
     }
@@ -53,26 +54,26 @@ export default function SignupPage() {
   return (
     <div>
       <Header />
-      <main className="pt-20 min-h-screen flex items-center justify-center px-12">
+      <main className="flex min-h-screen items-center justify-center px-12 pt-20">
         <div className="w-full max-w-md py-32">
-          <h1 className="font-headline text-5xl mb-4">Înregistrare</h1>
-          <p className="font-label text-[11px] uppercase tracking-widest text-secondary mb-12">
-            Alătură-te cercului RED STUDIO
+          <h1 className="mb-4 font-headline text-5xl">Inregistrare</h1>
+          <p className="mb-12 font-label text-[11px] uppercase tracking-widest text-secondary">
+            Alatura-te cercului {SITE_WORDMARK}
           </p>
 
-          {error && (
-            <div className="mb-8 p-4 bg-error-container text-on-error-container font-label text-xs uppercase tracking-widest">
+          {error ? (
+            <div className="mb-8 bg-error-container p-4 font-label text-xs uppercase tracking-widest text-on-error-container">
               {error}
             </div>
-          )}
+          ) : null}
 
           <form className="space-y-8" onSubmit={handleSubmit}>
             <div>
-              <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">
-                Nume Complet
+              <label className="mb-2 block font-label text-[10px] uppercase tracking-[0.2em] text-outline">
+                Nume complet
               </label>
               <input
-                className="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-body text-sm focus:ring-0 focus:border-primary transition-all duration-500"
+                className="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-4 font-body text-sm transition-all duration-500 focus:border-primary focus:ring-0"
                 type="text"
                 placeholder="Nume Prenume"
                 value={fullName}
@@ -81,11 +82,11 @@ export default function SignupPage() {
               />
             </div>
             <div>
-              <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">
+              <label className="mb-2 block font-label text-[10px] uppercase tracking-[0.2em] text-outline">
                 Email
               </label>
               <input
-                className="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-body text-sm focus:ring-0 focus:border-primary transition-all duration-500"
+                className="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-4 font-body text-sm transition-all duration-500 focus:border-primary focus:ring-0"
                 type="email"
                 placeholder="adresa@email.com"
                 value={email}
@@ -94,11 +95,11 @@ export default function SignupPage() {
               />
             </div>
             <div>
-              <label className="block font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2">
-                Parolă
+              <label className="mb-2 block font-label text-[10px] uppercase tracking-[0.2em] text-outline">
+                Parola
               </label>
               <input
-                className="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-body text-sm focus:ring-0 focus:border-primary transition-all duration-500"
+                className="w-full border-0 border-b border-outline-variant bg-transparent px-0 py-4 font-body text-sm transition-all duration-500 focus:border-primary focus:ring-0"
                 type="password"
                 placeholder="••••••••"
                 value={password}
@@ -110,17 +111,17 @@ export default function SignupPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-primary text-white py-5 font-label text-xs uppercase tracking-widest hover:bg-primary-container transition-all duration-500 disabled:opacity-50"
+              className="w-full bg-primary py-5 font-label text-xs uppercase tracking-widest text-white transition-all duration-500 hover:bg-primary-container disabled:opacity-50"
             >
-              {loading ? "Se creează contul..." : "Creează Cont"}
+              {loading ? "Se creeaza contul..." : "Creeaza cont"}
             </button>
           </form>
           <div className="mt-8 text-center">
             <Link
-              className="font-label text-[10px] uppercase tracking-widest text-outline hover:text-primary transition-colors"
+              className="font-label text-[10px] uppercase tracking-widest text-outline transition-colors hover:text-primary"
               href="/login"
             >
-              Ai deja cont? Autentifică-te
+              Ai deja cont? Autentifica-te
             </Link>
           </div>
         </div>

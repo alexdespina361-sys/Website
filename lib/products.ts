@@ -1,12 +1,15 @@
+import { unstable_noStore as noStore } from "next/cache";
 import { createSupabaseAdminClient } from "./supabase-server";
 import type { ProductWithDetails } from "./types";
 
 export async function getProducts(): Promise<ProductWithDetails[]> {
+  noStore();
   const supabase = createSupabaseAdminClient();
   const { data: products, error } = await supabase
     .from("products")
     .select("*, variants:product_variants(*), images:product_images(*)")
-    .order("created_at");
+    .eq("is_archived", false)
+    .order("created_at", { ascending: false });
 
   if (error) {
     console.error("Error fetching products:", error);
@@ -19,6 +22,7 @@ export async function getProducts(): Promise<ProductWithDetails[]> {
 export async function getProductBySlug(
   slug: string
 ): Promise<ProductWithDetails | null> {
+  noStore();
   const supabase = createSupabaseAdminClient();
   const { data, error } = await supabase
     .from("products")
@@ -35,11 +39,13 @@ export async function getProductBySlug(
 }
 
 export async function getFeaturedProducts(): Promise<ProductWithDetails[]> {
+  noStore();
   const supabase = createSupabaseAdminClient();
   const { data: products, error } = await supabase
     .from("products")
     .select("*, variants:product_variants(*), images:product_images(*)")
     .eq("is_archived", false)
+    .order("created_at", { ascending: false })
     .limit(3);
 
   if (error) {

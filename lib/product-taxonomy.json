@@ -1,0 +1,85 @@
+[
+  {
+    "group": "ÎMBRĂCĂMINTE",
+    "categories": [
+      "Rochii",
+      "Seturi / Compleuri",
+      "Costum",
+      "Salopete",
+      "Fuste",
+      "Corsete și bustiere",
+      "Topuri de seară",
+      "Cămăși și bluze elegante",
+      "Sacouri",
+      "Pantaloni eleganți",
+      "Body-uri elegante",
+      "Kimono-uri / robe satin",
+      "Paltoane și cape",
+      "Trenciuri premium"
+    ]
+  },
+  {
+    "group": "ÎNCĂLȚĂMINTE",
+    "categories": [
+      "Sandale",
+      "Pantofi stiletto",
+      "Pantofi eleganți cu toc",
+      "Botine elegante",
+      "Sandale de seară",
+      "Mules premium"
+    ]
+  },
+  {
+    "group": "LENJERIE & HOMEWEAR",
+    "categories": [
+      "Slipuri / Lenjerie intimă",
+      "Sutiene",
+      "Seturi de lenjerie",
+      "Body-uri de lenjerie",
+      "Pijamale satin",
+      "Halate / robe luxury",
+      "Loungewear premium"
+    ]
+  },
+  {
+    "group": "GENȚI & POȘETE",
+    "categories": [
+      "Poșetă de seară",
+      "Seturi cu geantă + bijuterii",
+      "Plicuri de seară",
+      "Genți de mână premium",
+      "Mini bag-uri elegante",
+      "Genți de ocazie",
+      "Genți statement"
+    ]
+  },
+  {
+    "group": "BIJUTERII & CEASURI",
+    "categories": [
+      "Seturi de bijuterii",
+      "Seturi cadou cu ceas",
+      "Ceas",
+      "Coliere",
+      "Cercei",
+      "Brățări",
+      "Inele",
+      "Bijuterii statement",
+      "Bijuterii pentru mireasă",
+      "Ceasuri premium",
+      "Seturi cadou luxury"
+    ]
+  },
+  {
+    "group": "ACCESORII",
+    "categories": [
+      "Accesorii de ocazie",
+      "Accesorii decorative",
+      "Curele statement",
+      "Eșarfe și șaluri fine",
+      "Mănuși elegante",
+      "Agrafe / accesorii păr",
+      "Ochelari de soare fashion",
+      "Broșe"
+    ]
+  }
+]

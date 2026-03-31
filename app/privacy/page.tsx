@@ -1,29 +1,30 @@
 import EditorialPage from "@/components/EditorialPage";
+import { SITE_WORDMARK } from "@/lib/site";
 
 export default function PrivacyPage() {
   return (
     <EditorialPage
       eyebrow="Legal"
-      title="Politica de Confidențialitate"
-      intro="Colectăm doar datele necesare pentru a procesa comenzile, a menține conturile utilizatorilor și a răspunde solicitărilor trimise prin site."
+      title="Politica de Confidentialitate"
+      intro="Colectam doar datele necesare pentru a procesa comenzile, a mentine conturile utilizatorilor si a raspunde solicitarilor trimise prin site."
       sections={[
         {
           title: "Date colectate",
           body: [
-            "Putem procesa numele, adresa de email, adresa de livrare, istoricul comenzilor și informațiile transmise prin formularul de contact.",
-            "Datele de plată nu sunt stocate pe serverele RED STUDIO. Acestea sunt procesate exclusiv prin Stripe.",
+            "Putem procesa numele, adresa de email, adresa de livrare, istoricul comenzilor si informatiile transmise prin formularul de contact.",
+            `${SITE_WORDMARK} nu solicita si nu stocheaza date de card, deoarece magazinul foloseste exclusiv confirmarea comenzii cu plata la livrare.`,
           ],
         },
         {
           title: "Utilizarea datelor",
           body: [
-            "Folosim datele pentru autentificare, livrarea comenzilor, suport post-vânzare și comunicări tranzacționale precum confirmările de comandă.",
+            "Folosim datele pentru autentificare, livrarea comenzilor, suport post-vanzare si comunicari tranzactionale precum confirmarile de comanda.",
           ],
         },
         {
           title: "Drepturile tale",
           body: [
-            "Poți solicita actualizarea sau ștergerea datelor personale, în limita obligațiilor legale privind evidența contabilă și fiscală.",
+            "Poti solicita actualizarea sau stergerea datelor personale, in limita obligatiilor legale privind evidenta contabila si fiscala.",
           ],
         },
       ]}

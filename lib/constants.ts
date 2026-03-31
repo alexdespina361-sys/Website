@@ -1,4 +1,5 @@
 import { formatPrice } from "./format";
+import { formatProductCategory } from "./product-taxonomy";
 import type { ProductWithDetails } from "./types";
 
 // Local image paths for static assets (hero, editorial, etc.)
@@ -10,7 +11,7 @@ export const images = {
   newsletter: "/images/products/newsletter-bag.webp",
   sidebarSneaker: "/images/products/sidebar-sneaker.webp",
   sidebarCoat: "/images/products/sidebar-coat.webp",
-  collectionThumb: "/images/products/collection-thumb.webp",
+  collectionThumb: "/images/products/collection-thumb.webp"
 };
 
 // Helper to get lowest price for a product
@@ -25,11 +26,24 @@ export function getCompareAtPrice(product: ProductWithDetails): number | null {
   return variant?.compare_at_price_cents ?? null;
 }
 
+export function getSortedProductImages(product: ProductWithDetails) {
+  return [...(product.images || [])].sort((leftImage, rightImage) => {
+    if (leftImage.sort_order !== rightImage.sort_order) {
+      return leftImage.sort_order - rightImage.sort_order;
+    }
+
+    return leftImage.created_at.localeCompare(rightImage.created_at);
+  });
+}
+
 // Helper to get product image
 export function getProductImage(product: ProductWithDetails): string {
-  if (product.images && product.images.length > 0) {
-    return product.images[0].url;
+  const images = getSortedProductImages(product);
+
+  if (images.length > 0) {
+    return images[0].url;
   }
+
   return "";
 }
 
@@ -39,9 +53,15 @@ export function formatProductForDisplay(product: ProductWithDetails) {
     name: product.name,
     slug: product.slug,
     material: product.material || "",
+    category: product.category || "",
+    categoryGroup: product.category_group || "",
+    categoryLabel: formatProductCategory(product),
+    season: product.season || "",
     price: formatPrice(getLowestPrice(product)),
-    originalPrice: getCompareAtPrice(product) ? formatPrice(getCompareAtPrice(product)!) : undefined,
+    originalPrice: getCompareAtPrice(product)
+      ? formatPrice(getCompareAtPrice(product)!)
+      : undefined,
     image: getProductImage(product),
-    badge: product.is_archived ? "Arhivă" : undefined,
+    badge: product.is_archived ? "Arhivă" : undefined
   };
 }

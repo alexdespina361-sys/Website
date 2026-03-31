@@ -1,30 +1,31 @@
 import EditorialPage from "@/components/EditorialPage";
+import { CONTACT_EMAIL, SITE_WORDMARK } from "@/lib/site";
 
 export default function ShippingPage() {
   return (
     <EditorialPage
-      eyebrow="Operațiuni"
-      title="Livrare și Retur"
-      intro="Comenzile RED STUDIO sunt procesate manual pentru a păstra controlul asupra calității, ambalării și acurateței fiecărei variante trimise."
+      eyebrow="Operatiuni"
+      title="Livrare si retur"
+      intro={`Comenzile ${SITE_WORDMARK} sunt procesate manual pentru a pastra controlul asupra calitatii, ambalarii si acuratetei fiecarei variante trimise.`}
       sections={[
         {
           title: "Livrare",
           body: [
-            "Comenzile confirmate sunt expediate în 1-3 zile lucrătoare. Vei primi notificări prin email după confirmarea plății și după expediere.",
-            "Costul final de livrare este afișat în Stripe Checkout înainte de confirmarea plății.",
+            "Comenzile confirmate sunt expediate in 1-3 zile lucratoare. Vei primi notificari prin email dupa confirmarea comenzii si dupa expediere.",
+            "Costul final de livrare este comunicat inainte de expediere, iar plata se face exclusiv ramburs, la primirea coletului.",
           ],
         },
         {
           title: "Retur",
           body: [
-            "Produsele pot fi returnate în termen de 30 de zile dacă sunt în stare impecabilă, cu etichetele și ambalajele originale.",
-            "Pentru inițierea unui retur, contactează echipa RED STUDIO folosind adresa de email din pagina de contact și include numărul comenzii.",
+            "Produsele pot fi returnate in termen de 30 de zile daca sunt in stare impecabila, cu etichetele si ambalajele originale.",
+            `Pentru initierea unui retur, contacteaza echipa ${SITE_WORDMARK} la ${CONTACT_EMAIL} si include numarul comenzii.`,
           ],
         },
         {
           title: "Produse speciale",
           body: [
-            "Piesele produse la comandă sau personalizate pot avea condiții distincte de retur, comunicate explicit înaintea plății.",
+            "Piesele produse la comanda sau personalizate pot avea conditii distincte de retur, comunicate explicit inainte de confirmarea comenzii.",
           ],
         },
       ]}

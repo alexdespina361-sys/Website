@@ -33,25 +33,29 @@ export default async function AccountOrdersPage() {
   return (
     <div>
       <Header />
-      <main className="pt-20 min-h-screen">
-        <section className="px-12 md:px-24 py-32">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
-            {/* Sidebar */}
+      <main className="min-h-screen pt-20">
+        <section className="px-12 py-32 md:px-24">
+          <div className="grid grid-cols-1 gap-16 md:grid-cols-4">
             <div className="md:col-span-1">
-              <h2 className="font-headline text-2xl mb-8">Contul Meu</h2>
+              <h2 className="mb-8 font-headline text-2xl">Contul meu</h2>
               <nav className="space-y-4">
-                <a className="block font-label text-[11px] uppercase tracking-widest text-outline hover:text-primary transition-colors pl-4" href="/account">
-                  Setări
+                <a
+                  className="block pl-4 font-label text-[11px] uppercase tracking-widest text-outline transition-colors hover:text-primary"
+                  href="/account"
+                >
+                  Setari
                 </a>
-                <a className="block font-label text-[11px] uppercase tracking-widest text-primary border-l-2 border-primary pl-4" href="/account/orders">
+                <a
+                  className="block border-l-2 border-primary pl-4 font-label text-[11px] uppercase tracking-widest text-primary"
+                  href="/account/orders"
+                >
                   Comenzi
                 </a>
               </nav>
             </div>
 
-            {/* Content */}
             <div className="md:col-span-3">
-              <h3 className="font-headline text-3xl mb-12">Comenzile Mele</h3>
+              <h3 className="mb-12 font-headline text-3xl">Comenzile mele</h3>
               {orders.length === 0 ? (
                 <AccountOrdersEmptyState />
               ) : (
@@ -59,14 +63,16 @@ export default async function AccountOrdersPage() {
                   {orders.map((order) => (
                     <div
                       key={order.id}
-                      className="bg-surface-container-lowest p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
+                      className="flex flex-col items-start justify-between gap-4 bg-surface-container-lowest p-8 md:flex-row md:items-center"
                     >
                       <div>
                         <h4 className="font-headline text-lg italic">
-                          {order.items?.[0]?.product_name || "Comandă"}
-                          {order.items?.length > 1 ? ` +${order.items.length - 1} alte` : ""}
+                          {order.items?.[0]?.product_name || "Comanda"}
+                          {order.items?.length > 1
+                            ? ` +${order.items.length - 1} alte`
+                            : ""}
                         </h4>
-                        <p className="font-label text-[10px] uppercase tracking-widest text-outline mt-1">
+                        <p className="mt-1 font-label text-[10px] uppercase tracking-widest text-outline">
                           Comanda #{order.id.slice(0, 8)} ·{" "}
                           {new Date(order.created_at).toLocaleDateString("ro-RO", {
                             day: "numeric",
@@ -87,16 +93,16 @@ export default async function AccountOrdersPage() {
                             {order.fulfillment_status === "fulfilled"
                               ? "Livrat"
                               : order.fulfillment_status === "shipped"
-                                ? "În Tranzit"
+                                ? "In tranzit"
                                 : "Procesare"}
                           </span>
                           <span className="mt-2 block font-label text-[10px] uppercase tracking-widest text-outline">
                             {order.payment_method === "cash_on_delivery"
-                              ? "Plată la livrare"
-                              : "Plătit cu cardul"}
+                              ? "Plata la livrare"
+                              : "Platit online"}
                           </span>
                         </div>
-                        <span className="font-label text-sm text-primary font-bold">
+                        <span className="font-label text-sm font-bold text-primary">
                           {formatPriceDetailed(order.total_cents)}
                         </span>
                       </div>

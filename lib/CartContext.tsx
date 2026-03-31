@@ -7,6 +7,7 @@ import {
   useEffect,
   type ReactNode,
 } from "react";
+import { CART_STORAGE_KEY, LEGACY_CART_STORAGE_KEY } from "@/lib/site";
 
 export interface CartItem {
   id: string;
@@ -43,7 +44,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   // Load cart from localStorage
   useEffect(() => {
-    const saved = localStorage.getItem("red-studio-cart");
+    const saved =
+      localStorage.getItem(CART_STORAGE_KEY) ||
+      localStorage.getItem(LEGACY_CART_STORAGE_KEY);
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -72,7 +75,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
   // Save cart to localStorage
   useEffect(() => {
     if (loaded) {
-      localStorage.setItem("red-studio-cart", JSON.stringify(items));
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
+      localStorage.removeItem(LEGACY_CART_STORAGE_KEY);
     }
   }, [items, loaded]);
 

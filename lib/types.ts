@@ -30,6 +30,7 @@ export interface Product {
   name: string;
   slug: string;
   description: string | null;
+  category_group: string | null;
   category: string | null;
   material: string | null;
   season: string | null;
