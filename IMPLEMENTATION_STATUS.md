@@ -66,7 +66,7 @@
 - install: pass
 - typecheck: pass
 - lint: pass
-- build: pass
+- build: pass (27 routes)
 - start: pass (`next start`, verified with HTTP 200 on `/`, `/shop`, `/login`)
 - tests: none yet
 
