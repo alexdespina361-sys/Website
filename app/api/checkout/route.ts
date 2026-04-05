@@ -148,7 +148,6 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
-
     const supabase = createSupabaseServerClient();
     const adminSupabase = createSupabaseAdminClient();
     const {
@@ -221,7 +220,7 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({
-      redirectUrl: `/checkout/success?method=cash_on_delivery&order_id=${order.id}`,
+      redirectUrl: `/checkout/success?order_id=${order.id}`,
     });
   } catch (error) {
     console.error("Checkout error:", error);

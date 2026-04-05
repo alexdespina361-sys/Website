@@ -285,7 +285,7 @@ export default function ShopContent({
                     {product.image ? (
                       <Image
                         alt={product.name}
-                        className="w-full h-auto grayscale transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                        className="w-full h-auto transition-all duration-1000 group-hover:scale-105"
                         src={product.image}
                         width={900}
                         height={1200}

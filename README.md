@@ -8,9 +8,9 @@ Red Atelier is a fashion e-commerce site built with Next.js, TypeScript, Supabas
 - Language: TypeScript
 - Styling: Tailwind CSS v3
 - Database and Auth: Supabase
-- Payments: Cash on delivery only
+- Checkout: direct order creation with cash on delivery
 - Email: Resend
-- Deployment: Netlify
+- Deployment: any Node-compatible Next.js host
 
 ## Prerequisites
 
@@ -34,9 +34,6 @@ ADMIN_EMAILS=admin@example.com
 RESEND_API_KEY=your-resend-api-key
 RESEND_FROM_EMAIL=Red Atelier <contact@redatelier.store>
 CONTACT_EMAIL_TO=contact@redatelier.store
-
-# App
-NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
 
 ## Setup
@@ -87,11 +84,11 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 ## Product Import
 
-The importer reads [`produse noi/products.json`](/Users/Alex/Desktop/Website/produse%20noi/products.json) and:
+The importer reads [`produse noi/products.json`](/home/alex/Desktop/Website/produse%20noi/products.json) and:
 
 - maps products into the grouped taxonomy
 - preserves multi-image galleries
-- applies friendly Red Atelier product names from [`lib/product-name-overrides.json`](/Users/Alex/Desktop/Website/lib/product-name-overrides.json)
+- applies friendly Red Atelier product names from [`lib/product-name-overrides.json`](/home/alex/Desktop/Website/lib/product-name-overrides.json)
 - updates existing imported products by slug
 
 ## Email Flows
@@ -108,5 +105,7 @@ Important:
 ## Notes
 
 - The six original seed products and their linked test orders were removed from Supabase
-- Checkout is cash on delivery only; Stripe card checkout is disabled in the app
+- Checkout is cash on delivery only
 - Pricing currently reflects the imported catalog uplift, category minimums, and a final 20% increase
+- Logged-in customers can save multiple delivery addresses and reuse the default one at checkout
+- Admin APIs and order creation should use `SUPABASE_SERVICE_ROLE_KEY` in production

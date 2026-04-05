@@ -15,15 +15,13 @@ export interface ResolvedCheckoutItem {
 export interface OrderCreationInput {
   userId: string | null;
   shippingAddressId?: string | null;
-  paymentMethod: "card" | "cash_on_delivery";
+  paymentMethod: "cash_on_delivery";
   status: string;
   email: string;
   fullName: string | null;
   phone: string | null;
   address: string | null;
   totalCents: number;
-  stripeSessionId?: string | null;
-  stripePaymentIntentId?: string | null;
 }
 
 interface ReservedStockItem {
@@ -220,8 +218,6 @@ export async function createOrderWithItems(
       .insert({
         user_id: order.userId,
         shipping_address_id: order.shippingAddressId || null,
-        stripe_session_id: order.stripeSessionId || null,
-        stripe_payment_intent_id: order.stripePaymentIntentId || null,
         payment_method: order.paymentMethod,
         email: order.email,
         full_name: order.fullName,

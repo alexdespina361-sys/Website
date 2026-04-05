@@ -32,7 +32,7 @@ export default function CheckoutSuccessPage() {
           <h1 className="mb-4 font-headline text-4xl">Comanda confirmata</h1>
           <p className="mb-8 font-body text-lg text-secondary">
             Multumim. Comanda a fost inregistrata, iar plata se va face la
-            livrare.
+            livrare. Vei primi un email de confirmare in curand.
           </p>
           <div className="space-y-4">
             <Link

@@ -6,9 +6,9 @@ Convert the existing Stitch-generated clothing store frontend into a functional 
 ## Technical decisions
 - Frontend framework: Next.js + TypeScript
 - Backend/BaaS: Supabase
-- Payments: Stripe Checkout
+- Checkout: direct order confirmation with payment on delivery
 - Email: Resend
-- Deployment: Netlify
+- Deployment: standard Next.js hosting
 
 ## Milestone 1 — Audit and stabilization
 ### Objectives
@@ -101,15 +101,12 @@ Convert the existing Stitch-generated clothing store frontend into a functional 
 
 ## Milestone 6 — Checkout and orders
 ### Objectives
-- create Stripe Checkout session
-- handle success/cancel paths
-- build Stripe webhook endpoint
-- create orders and order_items on success
+- handle direct order confirmation
+- create orders and order_items at checkout
 - decrement stock safely
 
 ### Exit criteria
-- successful payment creates a valid order
-- duplicate webhook handling is safe
+- successful checkout creates a valid order
 - order data is visible in account/admin
 
 ---
@@ -141,8 +138,7 @@ Convert the existing Stitch-generated clothing store frontend into a functional 
 ## Milestone 9 — Deployment hardening
 ### Objectives
 - configure environment variables
-- Netlify deployment
-- production-safe webhook config
+- deployment configuration
 - README update
 
 ### Exit criteria
@@ -173,10 +169,10 @@ Convert the existing Stitch-generated clothing store frontend into a functional 
 - [ ] DB-backed products
 - [ ] variant purchasing works
 - [ ] cart works
-- [ ] Stripe Checkout works
-- [ ] webhook order creation works
+- [ ] checkout works
+- [ ] order creation works
 - [ ] stock updates work
 - [ ] account order history works
 - [ ] admin works
-- [ ] deployable on Netlify
+- [ ] deployable on the chosen host
 - [ ] README updated

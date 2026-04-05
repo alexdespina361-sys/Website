@@ -99,7 +99,7 @@ export default async function AccountOrdersPage() {
                           <span className="mt-2 block font-label text-[10px] uppercase tracking-widest text-outline">
                             {order.payment_method === "cash_on_delivery"
                               ? "Plata la livrare"
-                              : "Platit online"}
+                              : "Comanda confirmata"}
                           </span>
                         </div>
                         <span className="font-label text-sm font-bold text-primary">

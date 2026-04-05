@@ -82,9 +82,7 @@ export interface Order {
   id: string;
   user_id: string | null;
   shipping_address_id?: string | null;
-  stripe_session_id: string | null;
-  stripe_payment_intent_id: string | null;
-  payment_method?: "card" | "cash_on_delivery";
+  payment_method?: "cash_on_delivery" | string;
   email: string;
   full_name: string | null;
   phone?: string | null;

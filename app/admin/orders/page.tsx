@@ -165,7 +165,7 @@ export default function AdminOrdersPage() {
                       <td className="p-4 font-label text-[10px] uppercase tracking-widest text-outline">
                         {order.payment_method === "cash_on_delivery"
                           ? "Ramburs"
-                          : "Online"}
+                          : "Confirmata"}
                       </td>
                       <td className="p-4">
                         <select

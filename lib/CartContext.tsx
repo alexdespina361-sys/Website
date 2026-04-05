@@ -125,6 +125,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const clearCart = () => {
     setItems([]);
+    localStorage.removeItem("red-studio-cart");
   };
 
   const totalCents = items.reduce(

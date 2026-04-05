@@ -265,7 +265,7 @@ export default function Home() {
             <div className="group relative aspect-square overflow-hidden">
               <Image
                 alt="Accesorii si selectie premium"
-                className="object-cover grayscale transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                className="object-cover transition-all duration-1000 group-hover:scale-105"
                 fill
                 sizes="(min-width: 768px) 42vw, 100vw"
                 src={images.newsletter}

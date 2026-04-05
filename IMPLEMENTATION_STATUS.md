@@ -1,12 +1,12 @@
 # IMPLEMENTATION_STATUS.md
 
 ## Current status
-- Current milestone: Red Atelier catalog pricing rules and storefront polish
+- Current milestone: Red Atelier catalog polish, checkout simplification, and deployment cleanup
 - Status: in progress
 
 ## Completed
 - Full repo audit and architecture review
-- Supabase-backed catalog, auth, account area, admin tools, checkout, webhook, and email infrastructure
+- Supabase-backed catalog, auth, account area, admin tools, checkout, and email infrastructure
 - Structured product taxonomy with grouped categories
 - Multi-image product galleries across admin and storefront
 - Bulk import flow for `produse noi/products.json`
@@ -14,8 +14,8 @@
 - Brand rename from `Red Studio` to `Red Atelier` across visible storefront routes
 - Shop sidebar no longer exposes the `Material` filter
 - Checkout now supports cash on delivery only
-- Stripe checkout session creation disabled
-- Stripe webhook endpoint disabled for the storefront flow
+- Hosted payment and platform-specific runtime/configuration files were removed
+- Checkout now creates orders directly and clears the local cart on success
 - Contact page updated with phone, WhatsApp, and `contact@redatelier.store`
 - Homepage newsletter form now posts to a real `/api/newsletter` endpoint
 - Contact API now validates Resend responses instead of assuming delivery
@@ -28,6 +28,7 @@
 - Product list fetching now uses `noStore()` to avoid stale `/shop` catalog data
 - Variant prices were increased by 60% across the current catalog
 - Category price floors were applied for dresses, jumpsuits, bags, and accessory-style catalog groups before a further 20% catalog-wide increase
+- Product cards no longer default to a black-and-white filter
 
 ## Decisions made
 - Keep the current visual layout while updating copy, product naming, and interactions
@@ -36,6 +37,7 @@
 - Use `contact@redatelier.store` as the target inbox and sender identity for Resend
 - Treat a Resend API `error` as a failed submission instead of silently reporting success
 - Treat `BIJUTERII & CEASURI` as accessory-style pricing for the current catalog because there are no active products in the standalone `ACCESORII` group yet
+- Use `SUPABASE_SERVICE_ROLE_KEY` for privileged admin and order-creation work in production
 
 ## Blockers
 - No code blocker
@@ -61,10 +63,11 @@
 - `npm run import:products -- --dry-run`
 
 ## Validation results
-- install: not rerun in this milestone
+- install: pass
 - typecheck: pass
 - lint: pass
-- build: pass (28 routes)
+- build: pass
+- start: pass (`next start`, verified with HTTP 200 on `/`, `/shop`, `/login`)
 - tests: none yet
 
 ## Routes
@@ -89,3 +92,4 @@
 - `/admin/orders` - Order management
 - `/api/newsletter` - Newsletter submissions
 - `/api/contact` - Contact form submissions
+- `/api/checkout` - Order placement

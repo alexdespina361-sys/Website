@@ -454,6 +454,13 @@ export default function CheckoutButton() {
         confirmarea prin email si o vei vedea direct in cont daca esti
         autentificat.
       </p>
+
+      {selectedAddress ? (
+        <p className="font-body text-xs leading-relaxed text-secondary">
+          Adresa selectata va fi folosita automat pentru livrare la aceasta
+          comanda.
+        </p>
+      ) : null}
     </div>
   );
 }

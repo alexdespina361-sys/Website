@@ -55,20 +55,23 @@ ALTER TABLE orders
   ADD COLUMN IF NOT EXISTS shipping_address_id UUID REFERENCES shipping_addresses(id) ON DELETE SET NULL;
 
 ALTER TABLE orders
-  ADD COLUMN IF NOT EXISTS payment_method TEXT NOT NULL DEFAULT 'card';
+  ADD COLUMN IF NOT EXISTS payment_method TEXT NOT NULL DEFAULT 'cash_on_delivery';
 
 ALTER TABLE orders
   ADD COLUMN IF NOT EXISTS phone TEXT;
 
 DO $$
 BEGIN
-  IF NOT EXISTS (
+  IF EXISTS (
     SELECT 1
     FROM pg_constraint
     WHERE conname = 'orders_payment_method_check'
   ) THEN
     ALTER TABLE orders
-      ADD CONSTRAINT orders_payment_method_check
-      CHECK (payment_method IN ('card', 'cash_on_delivery'));
+      DROP CONSTRAINT orders_payment_method_check;
   END IF;
+
+  ALTER TABLE orders
+    ADD CONSTRAINT orders_payment_method_check
+    CHECK (char_length(trim(payment_method)) > 0);
 END $$;

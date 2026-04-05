@@ -27,8 +27,8 @@ This is a clothing shop. The design already exists. Your job is to make it funct
 - Next.js
 - TypeScript
 - Supabase for auth, database, and storage
-- Stripe Checkout for payments
-- Netlify for deployment
+- direct order confirmation with payment on delivery
+- deployable on a standard Next.js host
 - Resend for transactional email
 
 ## Do not do
@@ -46,8 +46,8 @@ This is a clothing shop. The design already exists. Your job is to make it funct
 4. Add auth
 5. Add product/variant data model
 6. Add cart
-7. Add Stripe Checkout
-8. Add webhook-driven order creation
+7. Add checkout and order creation
+8. Add inventory updates after order placement
 9. Add admin CRUD
 10. Add email and operational pages
 11. Final deployment hardening
@@ -97,9 +97,8 @@ Implement:
 - protected admin area
 
 ## Checkout requirements
-Use Stripe Checkout, not a custom card form.
-Use webhook confirmation to create orders.
-Successful payment must:
+Use a direct checkout flow, not a custom card form.
+Successful order placement must:
 - create order records
 - create order_items
 - reduce stock
@@ -122,9 +121,9 @@ The task is complete only when:
 - product data is database-backed
 - size/color variants are purchasable
 - cart works reliably
-- checkout works with Stripe Checkout
-- webhook creates orders correctly
-- inventory updates after successful payment
+- checkout works end-to-end
+- orders are created correctly
+- inventory updates after successful order placement
 - account order history works
 - admin tools work at a basic operational level
 - app deploys successfully

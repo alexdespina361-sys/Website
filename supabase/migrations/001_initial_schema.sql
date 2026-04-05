@@ -81,8 +81,6 @@ CREATE TABLE IF NOT EXISTS cart_items (
 CREATE TABLE IF NOT EXISTS orders (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   user_id UUID REFERENCES auth.users(id) ON DELETE SET NULL,
-  stripe_session_id TEXT UNIQUE,
-  stripe_payment_intent_id TEXT,
   email TEXT NOT NULL,
   full_name TEXT,
   address TEXT,
@@ -117,7 +115,6 @@ CREATE INDEX IF NOT EXISTS idx_cart_items_cart_id ON cart_items(cart_id);
 CREATE INDEX IF NOT EXISTS idx_cart_items_variant_id ON cart_items(variant_id);
 CREATE INDEX IF NOT EXISTS idx_order_items_order_id ON order_items(order_id);
 CREATE INDEX IF NOT EXISTS idx_orders_user_id ON orders(user_id);
-CREATE INDEX IF NOT EXISTS idx_orders_stripe_session ON orders(stripe_session_id);
 
 -- ============================================================
 -- 4. ROW LEVEL SECURITY
